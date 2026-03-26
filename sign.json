@@ -1,0 +1,53 @@
+{
+  "rules": [
+    {
+      "code": "registration_initials_signature",
+      "page_number": 5,
+      "x": 347,
+      "y": 114,"width": 102,
+      "height": 27,
+      "required": true,
+      "is_active": true
+    },
+    {
+      "code": "privacy_ack_signature",
+      "page_number": 9,
+      "x": 259,
+      "y": 485,
+      "width": 168,
+      "height": 24,
+      "required": true,
+      "is_active": true
+    },
+    {
+      "code": "media_consent_signature",
+      "page_number": 15,
+      "x": 259,
+      "y": 440,
+      "width": 154,
+      "height": 24,
+      "required": true,
+      "is_active": true
+    },
+    {
+      "code": "telemedicine_signature",
+      "page_number": 17,
+      "x": 259,
+      "y": 276,
+      "width": 154,
+      "height": 24,
+      "required": true,
+      "is_active": true
+    },
+    {
+      "code": "financial_responsibility_signature",
+      "page_number": 19,
+      "x": 259,
+      "y": 282,
+      "width": 154,
+      "height": 24,
+      "required": true,
+      "is_active": true
+    }
+  ]
+}

@@ -1,0 +1,550 @@
+{
+  "rules": [
+    {
+      "source_path": "patient_info.as_of_date",
+      "target_field": "patient_registration_as_of_date",
+      "transform": "date",
+      "required": true
+    },
+    {
+      "source_path": "patient_info.name.last_name",
+      "target_field": "patient_last_name",
+      "required": true
+    },
+    {
+      "source_path": "patient_info.name.first_name",
+      "target_field": "patient_first_name",
+      "required": true
+    },
+    {
+      "source_path": "patient_info.name.middle_initial",
+      "target_field": "patient_middle_initial"
+    },
+    {
+      "source_path": "patient_info.address.street",
+      "target_field": "patient_street_address",
+      "required": true
+    },
+    {
+      "source_path": "patient_info.address.city",
+      "target_field": "patient_city",
+      "required": true
+    },
+    {
+      "source_path": "patient_info.address.state",
+      "target_field": "patient_state",
+      "required": true
+    },
+    {
+      "source_path": "patient_info.address.zip",
+      "target_field": "patient_zip",
+      "required": true
+    },
+    {
+      "source_path": "patient_info.phones.cell",
+      "target_field": "patient_cell_phone",
+      "required": true
+    },
+    {
+      "source_path": "patient_info.phones.work",
+      "target_field": "patient_work_phone",
+      "required": true
+    },
+    {
+      "source_path": "patient_info.email",
+      "target_field": "patient_email",
+      "required": true
+    },
+    {
+      "source_path": "patient_info.dob",
+      "target_field": "patient_dob",
+      "transform": "date",
+      "required": true
+    },
+    {
+      "source_path": "patient_info.legal_sex",
+      "target_field": "patient_legal_sex_m",
+      "transform": "equals:M",
+      "required": true
+    },
+    {
+      "source_path": "patient_info.legal_sex",
+      "target_field": "patient_legal_sex_f",
+      "transform": "equals:F",
+      "required": true
+    },
+    {
+      "source_path": "patient_info.marital_status",
+      "target_field": "patient_marital_status_single",
+      "transform": "equals:Single",
+      "required": true
+    },
+    {
+      "source_path": "patient_info.marital_status",
+      "target_field": "patient_marital_status_married",
+      "transform": "equals:Married",
+      "required": true
+    },
+    {
+      "source_path": "patient_info.marital_status",
+      "target_field": "patient_marital_status_widowed",
+      "transform": "equals:Widowed",
+      "required": true
+    },
+    {
+      "source_path": "patient_info.marital_status",
+      "target_field": "patient_marital_status_divorced",
+      "transform": "equals:Divorced",
+      "required": true
+    },
+    {
+      "source_path": "patient_info.race",
+      "target_field": "patient_race_african_american_black",
+      "transform": "equals:African-American/Black",
+      "required": true
+    },
+    {
+      "source_path": "patient_info.race",
+      "target_field": "patient_race_asian",
+      "transform": "equals:Asian",
+      "required": true
+    },
+    {
+      "source_path": "patient_info.race",
+      "target_field": "patient_race_white",
+      "transform": "equals:White",
+      "required": true
+    },
+    {
+      "source_path": "patient_info.race",
+      "target_field": "patient_race_american_indian_alaska_native",
+      "transform": "equals:American Indian or Alaska Native",
+      "required": true
+    },
+    {
+      "source_path": "patient_info.race",
+      "target_field": "patient_race_native_hawaiian_pacific_islander",
+      "transform": "equals:Native Hawaiian or Other Pacific Islander",
+      "required": true
+    },
+    {
+      "source_path": "patient_info.race",
+      "target_field": "patient_race_other",
+      "transform": "equals:Other",
+      "required": true
+    },
+    {
+      "source_path": "patient_info.race",
+      "target_field": "patient_race_declined",
+      "transform": "equals:Declined",
+      "required": true
+    },
+    {
+      "source_path": "patient_info.race_other",
+      "target_field": "patient_race_other_text"
+    },
+    {
+      "source_path": "patient_info.ethnicity",
+      "target_field": "patient_ethnicity_hispanic_latino",
+      "transform": "equals:Hispanic or Latino",
+      "required": true
+    },
+    {
+      "source_path": "patient_info.ethnicity",
+      "target_field": "patient_ethnicity_non_hispanic_latino",
+      "transform": "equals:Non-Hispanic or Latino",
+      "required": true
+    },
+    {
+      "source_path": "patient_info.ethnicity",
+      "target_field": "patient_ethnicity_declined",
+      "transform": "equals:Declined",
+      "required": true
+    },
+    {
+      "source_path": "patient_info.occupation",
+      "target_field": "patient_occupation"
+    },
+    {
+      "source_path": "patient_info.employer_name",
+      "target_field": "patient_employer_name"
+    },
+    {
+      "source_path": "patient_info.employer_address",
+      "target_field": "patient_employer_address"
+    },
+    {
+      "source_path": "patient_info.employer_phone",
+      "target_field": "patient_employer_phone"
+    },
+    {
+      "source_path": "patient_info.emergency_contact.name",
+      "target_field": "emergency_contact_name",
+      "required": true
+    },
+    {
+      "source_path": "patient_info.emergency_contact.relationship",
+      "target_field": "emergency_contact_relationship",
+      "required": true
+    },
+    {
+      "source_path": "patient_info.emergency_contact.phone",
+      "target_field": "emergency_contact_phone",
+      "required": true
+    },
+    {
+      "source_path": "patient_info.primary_insurance.carrier",
+      "target_field": "primary_insurance_carrier",
+      "required": true
+    },
+    {
+      "source_path": "patient_info.primary_insurance.insured_identifier_part_1",
+      "target_field": "primary_insured_ssn_part_1"
+    },
+    {
+      "source_path": "patient_info.primary_insurance.insured_identifier_part_2",
+      "target_field": "primary_insured_ssn_part_2"
+    },
+    {
+      "source_path": "patient_info.primary_insurance.insured_identifier_part_3",
+      "target_field": "primary_insured_ssn_part_3"
+    },
+    {
+      "source_path": "patient_info.primary_insurance.billing_address",
+      "target_field": "primary_insurance_billing_address"
+    },
+    {
+      "source_path": "patient_info.primary_insurance.relationship_to_patient",
+      "target_field": "primary_insurance_relationship_to_patient"
+    },
+    {
+      "source_path": "patient_info.primary_insurance.insured_employer_name",
+      "target_field": "primary_insured_employer_name"
+    },
+    {
+      "source_path": "patient_info.primary_insurance.insured_dob",
+      "target_field": "primary_insured_dob",
+      "transform": "date"
+    },
+    {
+      "source_path": "patient_info.primary_insurance.policy_number",
+      "target_field": "primary_insured_policy_number"
+    },
+    {
+      "source_path": "patient_info.primary_insurance.group_number",
+      "target_field": "primary_insured_group_number"
+    },
+    {
+      "source_path": "patient_info.secondary_insurance.carrier",
+      "target_field": "secondary_insurance_carrier"
+    },
+    {
+      "source_path": "patient_info.secondary_insurance.insured_identifier_part_1",
+      "target_field": "secondary_insured_ssn_part_1"
+    },
+    {
+      "source_path": "patient_info.secondary_insurance.insured_identifier_part_2",
+      "target_field": "secondary_insured_ssn_part_2"
+    },
+    {
+      "source_path": "patient_info.secondary_insurance.insured_identifier_part_3",
+      "target_field": "secondary_insured_ssn_part_3"
+    },
+    {
+      "source_path": "patient_info.secondary_insurance.billing_address",
+      "target_field": "secondary_insurance_billing_address"
+    },
+    {
+      "source_path": "patient_info.secondary_insurance.relationship_to_patient",
+      "target_field": "secondary_insurance_relationship_to_patient"
+    },
+    {
+      "source_path": "patient_info.secondary_insurance.insured_employer_name",
+      "target_field": "secondary_insured_employer_name"
+    },
+    {
+      "source_path": "patient_info.secondary_insurance.insured_dob",
+      "target_field": "secondary_insured_dob",
+      "transform": "date"
+    },
+    {
+      "source_path": "patient_info.secondary_insurance.policy_number",
+      "target_field": "secondary_insured_policy_number"
+    },
+    {
+      "source_path": "patient_info.secondary_insurance.group_number",
+      "target_field": "secondary_insured_group_number"
+    },
+    {
+      "source_path": "patient_info.pharmacy.name",
+      "target_field": "pharmacy_name",
+      "required": true
+    },
+    {
+      "source_path": "patient_info.pharmacy.address",
+      "target_field": "pharmacy_address",
+      "required": true
+    },
+    {
+      "source_path": "patient_info.pharmacy.phone",
+      "target_field": "pharmacy_phone",
+      "required": true
+    },
+    {
+      "source_path": "patient_info.pharmacy.fax",
+      "target_field": "pharmacy_fax",
+      "required": true
+    },
+    {
+      "source_path": "patient_info.referral_source",
+      "target_field": "patient_referral_source_google",
+      "transform": "equals:Google",
+      "required": true
+    },
+    {
+      "source_path": "patient_info.referral_source",
+      "target_field": "patient_referral_source_facebook",
+      "transform": "equals:Facebook",
+      "required": true
+    },
+    {
+      "source_path": "patient_info.referral_source",
+      "target_field": "patient_referral_source_family_friend",
+      "transform": "equals:Family/friend",
+      "required": true
+    },
+    {
+      "source_path": "patient_info.referral_source",
+      "target_field": "patient_referral_source_specialist_other_doctor",
+      "transform": "equals:Specialist/other Dr.",
+      "required": true
+    },
+    {
+      "source_path": "patient_info.referral_source",
+      "target_field": "patient_referral_source_other",
+      "transform": "equals:Other",
+      "required": true
+    },
+    {
+      "source_path": "patient_info.pharmacy_history_authorization",
+      "target_field": "patient_pharmacy_history_authorization_yes",
+      "transform": "equals:Yes",
+      "required": true
+    },
+    {
+      "source_path": "patient_info.pharmacy_history_authorization",
+      "target_field": "patient_pharmacy_history_authorization_no",
+      "transform": "equals:No",
+      "required": true
+    },
+    {
+      "source_path": "patient_info.registration_initials_signature_data",
+      "target_field": "registration_accuracy_initials_signature",
+      "required": false
+    },
+    {
+      "source_path": "communication_preferences.preferred_method",
+      "target_field": "communication_preference_phone_call",
+      "transform": "equals:Phone call",
+      "required": true
+    },
+    {
+      "source_path": "communication_preferences.preferred_method",
+      "target_field": "communication_preference_email",
+      "transform": "equals:Email",
+      "required": true
+    },
+    {
+      "source_path": "communication_preferences.preferred_method",
+      "target_field": "communication_preference_text_message",
+      "transform": "equals:Text Message",
+      "required": true
+    },
+    {
+      "source_path": "communication_preferences.preferred_method",
+      "target_field": "communication_preference_other",
+      "transform": "equals:Other",
+      "required": true
+    },
+    {
+      "source_path": "communication_preferences.preferred_phone_number",
+      "target_field": "communication_preference_phone_call_number"
+    },
+    {
+      "source_path": "communication_preferences.preferred_text_number",
+      "target_field": "communication_preference_text_number"
+    },
+    {
+      "source_path": "communication_preferences.preferred_email",
+      "target_field": "communication_preference_email_address"
+    },
+    {
+      "source_path": "communication_preferences.preferred_other_detail",
+      "target_field": "communication_preference_other_detail"
+    },
+    {
+      "source_path": "communication_preferences.voicemail_preference",
+      "target_field": "communication_voicemail_detailed_information",
+      "transform": "equals:Leave detailed treatment information"
+    },
+    {
+      "source_path": "communication_preferences.voicemail_preference",
+      "target_field": "communication_voicemail_callback_only",
+      "transform": "equals:Leave callback request only"
+    },
+    {
+      "source_path": "communication_preferences.marketing_communication_preference",
+      "target_field": "communication_marketing_treatment_and_marketing",
+      "transform": "equals:Authorize treatment and marketing messages",
+      "required": true
+    },
+    {
+      "source_path": "communication_preferences.marketing_communication_preference",
+      "target_field": "communication_marketing_appointment_and_health_reminders",
+      "transform": "equals:Authorize appointment and health reminders only",
+      "required": true
+    },
+    {
+      "source_path": "communication_preferences.marketing_communication_preference",
+      "target_field": "communication_marketing_do_not_authorize",
+      "transform": "equals:Do not authorize email or text messages",
+      "required": true
+    },
+    {
+      "source_path": "privacy_acknowledgement.authorized_information_recipients.recipient_1.name",
+      "target_field": "privacy_authorized_recipient_1_name"
+    },
+    {
+      "source_path": "privacy_acknowledgement.authorized_information_recipients.recipient_1.relationship",
+      "target_field": "privacy_authorized_recipient_1_relationship"
+    },
+    {
+      "source_path": "privacy_acknowledgement.authorized_information_recipients.recipient_1.number",
+      "target_field": "privacy_authorized_recipient_1_number"
+    },
+    {
+      "source_path": "privacy_acknowledgement.authorized_information_recipients.recipient_2.name",
+      "target_field": "privacy_authorized_recipient_2_name"
+    },
+    {
+      "source_path": "privacy_acknowledgement.authorized_information_recipients.recipient_2.relationship",
+      "target_field": "privacy_authorized_recipient_2_relationship"
+    },
+    {
+      "source_path": "privacy_acknowledgement.authorized_information_recipients.recipient_2.number",
+      "target_field": "privacy_authorized_recipient_2_number"
+    },
+    {
+      "source_path": "patient_info.full_name",
+      "target_field": "privacy_patient_name_printed",
+      "required": true
+    },
+    {
+      "source_path": "patient_info.dob",
+      "target_field": "privacy_patient_dob",
+      "transform": "date",
+      "required": true
+    },
+    {
+      "source_path": "privacy_acknowledgement.parent_or_guardian_name_printed",
+      "target_field": "privacy_parent_guardian_name_printed"
+    },
+    {
+      "source_path": "privacy_acknowledgement.signature_canvas_data",
+      "target_field": "privacy_signature",
+      "required": false
+    },
+    {
+      "source_path": "privacy_acknowledgement.signed_date",
+      "target_field": "privacy_signed_date",
+      "transform": "date",
+      "required": true
+    },
+    {
+      "source_path": "media_consent.permission_grant_marker",
+      "target_field": "media_consent_do_initials"
+    },
+    {
+      "source_path": "media_consent.permission_do_not_marker",
+      "target_field": "media_consent_do_not_initials"
+    },
+    {
+      "source_path": "patient_info.full_name",
+      "target_field": "media_consent_patient_name_printed",
+      "required": true
+    },
+    {
+      "source_path": "patient_info.dob",
+      "target_field": "media_consent_patient_dob",
+      "transform": "date",
+      "required": true
+    },
+    {
+      "source_path": "media_consent.parent_or_guardian_name_printed",
+      "target_field": "media_consent_parent_guardian_name_printed"
+    },
+    {
+      "source_path": "media_consent.signature_canvas_data",
+      "target_field": "media_consent_signature",
+      "required": false
+    },
+    {
+      "source_path": "media_consent.signed_date",
+      "target_field": "media_consent_signed_date",
+      "transform": "date",
+      "required": true
+    },
+    {
+      "source_path": "patient_info.full_name",
+      "target_field": "telemedicine_patient_name_printed",
+      "required": true
+    },
+    {
+      "source_path": "patient_info.dob",
+      "target_field": "telemedicine_patient_dob",
+      "transform": "date",
+      "required": true
+    },
+    {
+      "source_path": "telemedicine_consent.parent_or_guardian_name_printed",
+      "target_field": "telemedicine_parent_guardian_name_printed"
+    },
+    {
+      "source_path": "telemedicine_consent.signature_canvas_data",
+      "target_field": "telemedicine_signature",
+      "required": false
+    },
+    {
+      "source_path": "telemedicine_consent.signed_date",
+      "target_field": "telemedicine_signed_date",
+      "transform": "date",
+      "required": true
+    },
+    {
+      "source_path": "patient_info.full_name",
+      "target_field": "financial_responsibility_patient_name_printed",
+      "required": true
+    },
+    {
+      "source_path": "patient_info.dob",
+      "target_field": "financial_responsibility_patient_dob",
+      "transform": "date",
+      "required": true
+    },
+    {
+      "source_path": "financial_responsibility.parent_or_guardian_name_printed",
+      "target_field": "financial_responsibility_parent_guardian_name_printed"
+    },
+    {
+      "source_path": "financial_responsibility.signature_canvas_data",
+      "target_field": "financial_responsibility_signature",
+      "required": false
+    },
+    {
+      "source_path": "financial_responsibility.signed_date",
+      "target_field": "financial_responsibility_signed_date",
+      "transform": "date",
+      "required": true
+    }
+  ]
+}

@@ -1,0 +1,1889 @@
+{
+  "form_code": "reliance-new-patient-forms",
+  "version": 1,
+  "clinic_name": "Reliance Medical Center Inc.",
+  "title": "Reliance Medical Center Inc. - New Patient Forms",
+  "is_active": true,
+  "published_at": "2026-03-24T00:00:00Z",
+  "template_type": "pdf",
+  "schema_json": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "patient_info",
+      "communication_preferences",
+      "privacy_acknowledgement",
+      "media_consent",
+      "telemedicine_consent",
+      "financial_responsibility"
+    ],
+    "properties": {
+      "patient_info": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "as_of_date",
+          "name",
+          "full_name",
+          "address",
+          "phones",
+          "email",
+          "dob",
+          "legal_sex",
+          "marital_status",
+          "race",
+          "ethnicity",
+          "emergency_contact",
+          "primary_insurance",
+          "pharmacy",
+          "referral_source",
+          "pharmacy_history_authorization",
+          "registration_initials_signature_data"
+        ],
+        "properties": {
+          "as_of_date": {
+            "type": "string",
+            "format": "date"
+          },
+          "name": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "last_name",
+              "first_name"
+            ],
+            "properties": {
+              "last_name": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 30
+              },
+              "first_name": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 30
+              },
+              "middle_initial": {
+                "type": "string",
+                "maxLength": 1
+              }
+            }
+          },
+          "full_name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 80,
+            "pattern": "^[A-Za-z]+(?:[ '-][A-Za-z]+)+$"
+          },
+          "address": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "street",
+              "city",
+              "state",
+              "zip"
+            ],
+            "properties": {
+              "street": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 80
+              },
+              "city": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 40
+              },
+              "state": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 20
+              },
+              "zip": {
+                "type": "string",
+                "pattern": "^\\d{5}$",
+                "maxLength": 5
+              }
+            }
+          },
+          "phones": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "cell"
+            ],
+            "properties": {
+              "cell": {
+                "type": "string",
+                "pattern": "^$|^\\d{10}$"
+              },
+              "work": {
+                "type": "string",
+                "pattern": "^$|^\\d{10}$"
+              }
+            }
+          },
+          "email": {
+            "type": "string",
+            "format": "email",
+            "maxLength": 80
+          },
+          "dob": {
+            "type": "string",
+            "format": "date"
+          },
+          "legal_sex": {
+            "type": "string",
+            "enum": [
+              "M",
+              "F"
+            ]
+          },
+          "marital_status": {
+            "type": "string",
+            "enum": [
+              "Single",
+              "Married",
+              "Widowed",
+              "Divorced"
+            ]
+          },
+          "race": {
+            "type": "string",
+            "enum": [
+              "African-American/Black",
+              "Asian",
+              "White",
+              "American Indian or Alaska Native",
+              "Native Hawaiian or Other Pacific Islander",
+              "Other",
+              "Declined"
+            ]
+          },
+          "race_other": {
+            "type": "string",
+            "maxLength": 40
+          },
+          "ethnicity": {
+            "type": "string",
+            "enum": [
+              "Hispanic or Latino",
+              "Non-Hispanic or Latino",
+              "Declined"
+            ]
+          },
+          "occupation": {
+            "type": "string",
+            "maxLength": 60
+          },
+          "employer_name": {
+            "type": "string",
+            "maxLength": 80
+          },
+          "employer_address": {
+            "type": "string",
+            "maxLength": 120
+          },
+          "employer_phone": {
+            "type": "string",
+            "pattern": "^$|^\\d{10}$"
+          },
+          "emergency_contact": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "name",
+              "relationship",
+              "phone"
+            ],
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 80,
+                "pattern": "^[A-Za-z]+(?:[ '-][A-Za-z]+)+$"
+              },
+              "relationship": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 40
+              },
+              "phone": {
+                "type": "string",
+                "pattern": "^\\d{10}$"
+              }
+            }
+          },
+          "primary_insurance": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "carrier"
+            ],
+            "properties": {
+              "carrier": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 80
+              },
+              "insured_identifier_part_1": {
+                "type": "string",
+                "pattern": "^$|^\\d{1,3}$",
+                "maxLength": 3
+              },
+              "insured_identifier_part_2": {
+                "type": "string",
+                "pattern": "^$|^\\d{1,2}$",
+                "maxLength": 2
+              },
+              "insured_identifier_part_3": {
+                "type": "string",
+                "pattern": "^$|^\\d{1,4}$",
+                "maxLength": 4
+              },
+              "insured_ssn_full": {
+                "type": "string",
+                "format": "ssn",
+                "pattern": "^$|^\\d{9}$|^\\d{3}-\\d{2}-\\d{4}$",
+                "maxLength": 11
+              },
+              "billing_address": {
+                "type": "string",
+                "maxLength": 120
+              },
+              "relationship_to_patient": {
+                "type": "string",
+                "maxLength": 40
+              },
+              "insured_employer_name": {
+                "type": "string",
+                "maxLength": 80
+              },
+              "insured_dob": {
+                "type": "string",
+                "format": "date"
+              },
+              "policy_number": {
+                "type": "string",
+                "maxLength": 40
+              },
+              "group_number": {
+                "type": "string",
+                "maxLength": 40
+              }
+            }
+          },
+          "secondary_insurance": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [],
+            "properties": {
+              "carrier": {
+                "type": "string",
+                "maxLength": 80
+              },
+              "insured_identifier_part_1": {
+                "type": "string",
+                "pattern": "^$|^\\d{1,3}$",
+                "maxLength": 3
+              },
+              "insured_identifier_part_2": {
+                "type": "string",
+                "pattern": "^$|^\\d{1,2}$",
+                "maxLength": 2
+              },
+              "insured_identifier_part_3": {
+                "type": "string",
+                "pattern": "^$|^\\d{1,4}$",
+                "maxLength": 4
+              },
+              "insured_ssn_full": {
+                "type": "string",
+                "format": "ssn",
+                "pattern": "^$|^\\d{9}$|^\\d{3}-\\d{2}-\\d{4}$",
+                "maxLength": 11
+              },
+              "billing_address": {
+                "type": "string",
+                "maxLength": 120
+              },
+              "relationship_to_patient": {
+                "type": "string",
+                "maxLength": 40
+              },
+              "insured_employer_name": {
+                "type": "string",
+                "maxLength": 80
+              },
+              "insured_dob": {
+                "type": "string",
+                "format": "date"
+              },
+              "policy_number": {
+                "type": "string",
+                "maxLength": 40
+              },
+              "group_number": {
+                "type": "string",
+                "maxLength": 40
+              }
+            }
+          },
+          "pharmacy": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "name",
+              "address",
+              "phone",
+              "fax"
+            ],
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 80
+              },
+              "address": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 120
+              },
+              "phone": {
+                "type": "string",
+                "pattern": "^$|^\\d{10}$"
+              },
+              "fax": {
+                "type": "string",
+                "pattern": "^$|^\\d{10}$"
+              }
+            }
+          },
+          "referral_source": {
+            "type": "string",
+            "enum": [
+              "Google",
+              "Facebook",
+              "Family/friend",
+              "Specialist/other Dr.",
+              "Other"
+            ]
+          },
+          "referral_source_other": {
+            "type": "string",
+            "maxLength": 80
+          },
+          "pharmacy_history_authorization": {
+            "type": "string",
+            "enum": [
+              "Yes",
+              "No"
+            ]
+          },
+          "registration_initials_signature_data": {
+            "type": "string",
+            "pattern": "^$|^data:image\\/png;base64,.+$"
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "race": {
+                  "const": "Other"
+                }
+              },
+              "required": [
+                "race"
+              ]
+            },
+            "then": {
+              "required": [
+                "race_other"
+              ]
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "referral_source": {
+                  "const": "Other"
+                }
+              },
+              "required": [
+                "referral_source"
+              ]
+            },
+            "then": {
+              "required": [
+                "referral_source_other"
+              ]
+            }
+          }
+        ]
+      },
+      "communication_preferences": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "preferred_method",
+          "marketing_communication_preference"
+        ],
+        "properties": {
+          "preferred_method": {
+            "type": "string",
+            "enum": [
+              "Phone call",
+              "Email",
+              "Text Message",
+              "Other"
+            ]
+          },
+          "preferred_phone_number": {
+            "type": "string",
+            "pattern": "^$|^\\d{10}$"
+          },
+          "preferred_email": {
+            "type": "string",
+            "format": "email",
+            "maxLength": 80
+          },
+          "preferred_text_number": {
+            "type": "string",
+            "pattern": "^$|^\\d{10}$"
+          },
+          "preferred_other_detail": {
+            "type": "string",
+            "maxLength": 80
+          },
+          "voicemail_preference": {
+            "type": "string",
+            "enum": [
+              "Leave detailed treatment information",
+              "Leave callback request only"
+            ]
+          },
+          "marketing_communication_preference": {
+            "type": "string",
+            "enum": [
+              "Authorize treatment and marketing messages",
+              "Authorize appointment and health reminders only",
+              "Do not authorize email or text messages"
+            ]
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "preferred_method": {
+                  "const": "Phone call"
+                }
+              },
+              "required": [
+                "preferred_method"
+              ]
+            },
+            "then": {
+              "required": [
+                "preferred_phone_number",
+                "voicemail_preference"
+              ]
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "preferred_method": {
+                  "const": "Email"
+                }
+              },
+              "required": [
+                "preferred_method"
+              ]
+            },
+            "then": {
+              "required": [
+                "preferred_email"
+              ]
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "preferred_method": {
+                  "const": "Text Message"
+                }
+              },
+              "required": [
+                "preferred_method"
+              ]
+            },
+            "then": {
+              "required": [
+                "preferred_text_number"
+              ]
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "preferred_method": {
+                  "const": "Other"
+                }
+              },
+              "required": [
+                "preferred_method"
+              ]
+            },
+            "then": {
+              "required": [
+                "preferred_other_detail"
+              ]
+            }
+          }
+        ]
+      },
+      "privacy_acknowledgement": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "authorized_information_recipients",
+          "signature_canvas_data",
+          "signed_date"
+        ],
+        "properties": {
+          "signer_role": {
+            "type": "string",
+            "enum": [
+              "Patient",
+              "Authorized Representative"
+            ]
+          },
+          "authorized_information_recipients": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [],
+            "properties": {
+              "recipient_1": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [],
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "maxLength": 80
+                  },
+                  "relationship": {
+                    "type": "string",
+                    "maxLength": 40
+                  },
+                  "number": {
+                    "type": "string",
+                    "pattern": "^$|^\\d{10}$"
+                  }
+                }
+              },
+              "recipient_2": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [],
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "maxLength": 80
+                  },
+                  "relationship": {
+                    "type": "string",
+                    "maxLength": 40
+                  },
+                  "number": {
+                    "type": "string",
+                    "pattern": "^$|^\\d{10}$"
+                  }
+                }
+              }
+            }
+          },
+          "parent_or_guardian_name_printed": {
+            "type": "string",
+            "maxLength": 80,
+            "pattern": "^[A-Za-z]+(?:[ '-][A-Za-z]+)+$"
+          },
+          "signature_canvas_data": {
+            "type": "string",
+            "pattern": "^$|^data:image\\/png;base64,.+$"
+          },
+          "signed_date": {
+            "type": "string",
+            "format": "date"
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "signer_role": {
+                  "const": "Authorized Representative"
+                }
+              },
+              "required": [
+                "signer_role"
+              ]
+            },
+            "then": {
+              "required": [
+                "parent_or_guardian_name_printed"
+              ]
+            }
+          }
+        ]
+      },
+      "media_consent": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "signature_canvas_data",
+          "signed_date"
+        ],
+        "properties": {
+          "signer_role": {
+            "type": "string",
+            "enum": [
+              "Patient",
+              "Authorized Representative"
+            ]
+          },
+          "permission_choice": {
+            "type": "string",
+            "enum": [
+              "Do",
+              "Do Not"
+            ]
+          },
+          "permission_grant_marker": {
+            "type": "string",
+            "maxLength": 10,
+            "default": "I"
+          },
+          "permission_do_not_marker": {
+            "type": "string",
+            "maxLength": 10,
+            "default": "I"
+          },
+          "parent_or_guardian_name_printed": {
+            "type": "string",
+            "maxLength": 80,
+            "pattern": "^[A-Za-z]+(?:[ '-][A-Za-z]+)+$"
+          },
+          "signature_canvas_data": {
+            "type": "string",
+            "pattern": "^$|^data:image\\/png;base64,.+$"
+          },
+          "signed_date": {
+            "type": "string",
+            "format": "date"
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "signer_role": {
+                  "const": "Authorized Representative"
+                }
+              },
+              "required": [
+                "signer_role"
+              ]
+            },
+            "then": {
+              "required": [
+                "parent_or_guardian_name_printed"
+              ]
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "permission_choice": {
+                  "const": "Do"
+                }
+              },
+              "required": [
+                "permission_choice"
+              ]
+            },
+            "then": {
+              "required": [
+                "permission_grant_marker"
+              ]
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "permission_choice": {
+                  "const": "Do Not"
+                }
+              },
+              "required": [
+                "permission_choice"
+              ]
+            },
+            "then": {
+              "required": [
+                "permission_do_not_marker"
+              ]
+            }
+          }
+        ]
+      },
+      "telemedicine_consent": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "signature_canvas_data",
+          "signed_date"
+        ],
+        "properties": {
+          "signer_role": {
+            "type": "string",
+            "enum": [
+              "Patient",
+              "Authorized Representative"
+            ]
+          },
+          "parent_or_guardian_name_printed": {
+            "type": "string",
+            "maxLength": 80,
+            "pattern": "^[A-Za-z]+(?:[ '-][A-Za-z]+)+$"
+          },
+          "signature_canvas_data": {
+            "type": "string",
+            "pattern": "^$|^data:image\\/png;base64,.+$"
+          },
+          "signed_date": {
+            "type": "string",
+            "format": "date"
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "signer_role": {
+                  "const": "Authorized Representative"
+                }
+              },
+              "required": [
+                "signer_role"
+              ]
+            },
+            "then": {
+              "required": [
+                "parent_or_guardian_name_printed"
+              ]
+            }
+          }
+        ]
+      },
+      "financial_responsibility": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "signature_canvas_data",
+          "signed_date"
+        ],
+        "properties": {
+          "signer_role": {
+            "type": "string",
+            "enum": [
+              "Patient",
+              "Authorized Representative"
+            ]
+          },
+          "parent_or_guardian_name_printed": {
+            "type": "string",
+            "maxLength": 80,
+            "pattern": "^[A-Za-z]+(?:[ '-][A-Za-z]+)+$"
+          },
+          "signature_canvas_data": {
+            "type": "string",
+            "pattern": "^$|^data:image\\/png;base64,.+$"
+          },
+          "signed_date": {
+            "type": "string",
+            "format": "date"
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "signer_role": {
+                  "const": "Authorized Representative"
+                }
+              },
+              "required": [
+                "signer_role"
+              ]
+            },
+            "then": {
+              "required": [
+                "parent_or_guardian_name_printed"
+              ]
+            }
+          }
+        ]
+      }
+    }
+  },
+  "ui_json": {
+    "title": "Reliance Medical Center Inc. - New Patient Forms",
+    "layout": {
+      "type": "single-column",
+      "max_width": "980px",
+      "show_progress_bar": true,
+      "sticky_section_nav": true
+    },
+    "submit": {
+      "label": "Submit New Patient Forms",
+      "confirm_message": "I confirm the provided information is accurate and complete."
+    },
+    "sections": [
+      {
+        "id": "patient_registration",
+        "title": "Patient Registration",
+        "description": "Based on pages 4 to 6 of the PDF registration packet.",
+        "fields": [
+          {
+            "key": "patient_info.as_of_date",
+            "label": "Patient information as of today's date",
+            "widget": "date",
+            "required": true,
+            "default": "today"
+          },
+          {
+            "key": "patient_info.name.last_name",
+            "label": "Last Name",
+            "widget": "text",
+            "required": true,
+            "max_length": 30,
+            "help_text": "Use legal last name as it appears on official records.",
+            "readonly_from_prefill": true
+          },
+          {
+            "key": "patient_info.name.first_name",
+            "label": "First Name",
+            "widget": "text",
+            "required": true,
+            "max_length": 30,
+            "help_text": "Use legal first name as it appears on official records.",
+            "readonly_from_prefill": true
+          },
+          {
+            "key": "patient_info.name.middle_initial",
+            "label": "M.I.",
+            "widget": "text",
+            "max_length": 1,
+            "help_text": "M.I. means Middle Initial (optional, one letter)."
+          },
+          {
+            "key": "patient_info.address.street",
+            "label": "Street Address",
+            "widget": "text",
+            "required": true,
+            "max_length": 80
+          },
+          {
+            "key": "patient_info.address.city",
+            "label": "City",
+            "widget": "text",
+            "required": true,
+            "max_length": 40
+          },
+          {
+            "key": "patient_info.address.state",
+            "label": "State",
+            "widget": "text",
+            "required": true,
+            "max_length": 20
+          },
+          {
+            "key": "patient_info.address.zip",
+            "label": "Zip",
+            "widget": "text",
+            "required": true,
+            "max_length": 5,
+            "help_text": "Enter 5 digits."
+          },
+          {
+            "key": "patient_info.phones.cell",
+            "label": "Phone (C)",
+            "widget": "tel",
+            "required": true,
+            "max_length": 10,
+            "help_text": "C means Cell phone (required, 10 digits).",
+            "readonly_from_prefill": true
+          },
+          {
+            "key": "patient_info.phones.work",
+            "label": "Phone (W)",
+            "widget": "tel",
+            "required": false,
+            "max_length": 10,
+            "help_text": "W means Work phone (optional, 10 digits)."
+          },
+          {
+            "key": "patient_info.email",
+            "label": "Email Address",
+            "widget": "email",
+            "required": true,
+            "max_length": 80,
+            "readonly_from_prefill": true
+          },
+          {
+            "key": "patient_info.dob",
+            "label": "Birth Date",
+            "widget": "date",
+            "required": true,
+            "readonly_from_prefill": true
+          },
+          {
+            "key": "patient_info.legal_sex",
+            "label": "Legal Sex",
+            "widget": "radio",
+            "required": true,
+            "options": [
+              {
+                "label": "M",
+                "value": "M"
+              },
+              {
+                "label": "F",
+                "value": "F"
+              }
+            ]
+          },
+          {
+            "key": "patient_info.marital_status",
+            "label": "Marital Status",
+            "widget": "radio",
+            "required": true,
+            "options": [
+              {
+                "label": "Single",
+                "value": "Single"
+              },
+              {
+                "label": "Married",
+                "value": "Married"
+              },
+              {
+                "label": "Widowed",
+                "value": "Widowed"
+              },
+              {
+                "label": "Divorced",
+                "value": "Divorced"
+              }
+            ]
+          },
+          {
+            "key": "patient_info.race",
+            "label": "Race",
+            "widget": "radio",
+            "required": true,
+            "options": [
+              {
+                "label": "African-American/Black",
+                "value": "African-American/Black"
+              },
+              {
+                "label": "Asian",
+                "value": "Asian"
+              },
+              {
+                "label": "White",
+                "value": "White"
+              },
+              {
+                "label": "American Indian or Alaska Native",
+                "value": "American Indian or Alaska Native"
+              },
+              {
+                "label": "Native Hawaiian or Other Pacific Islander",
+                "value": "Native Hawaiian or Other Pacific Islander"
+              },
+              {
+                "label": "Other",
+                "value": "Other"
+              },
+              {
+                "label": "Declined",
+                "value": "Declined"
+              }
+            ]
+          },
+          {
+            "key": "patient_info.race_other",
+            "label": "Race (Other)",
+            "widget": "text",
+            "max_length": 40,
+            "visible_when": [
+              {
+                "field": "patient_info.race",
+                "operator": "equals",
+                "value": "Other"
+              }
+            ]
+          },
+          {
+            "key": "patient_info.ethnicity",
+            "label": "Ethnicity",
+            "widget": "radio",
+            "required": true,
+            "options": [
+              {
+                "label": "Hispanic or Latino",
+                "value": "Hispanic or Latino"
+              },
+              {
+                "label": "Non-Hispanic or Latino",
+                "value": "Non-Hispanic or Latino"
+              },
+              {
+                "label": "Declined",
+                "value": "Declined"
+              }
+            ]
+          },
+          {
+            "key": "patient_info.occupation",
+            "label": "Occupation",
+            "widget": "text",
+            "max_length": 60
+          },
+          {
+            "key": "patient_info.employer_name",
+            "label": "Employer Name",
+            "widget": "text",
+            "max_length": 80
+          },
+          {
+            "key": "patient_info.employer_address",
+            "label": "Employer Address",
+            "widget": "text",
+            "max_length": 120
+          },
+          {
+            "key": "patient_info.employer_phone",
+            "label": "Employer Phone",
+            "widget": "tel",
+            "max_length": 10,
+            "help_text": "Enter 10 digits."
+          }
+        ]
+      },
+      {
+        "id": "emergency_insurance_pharmacy",
+        "title": "Emergency Contact, Insurance, and Pharmacy",
+        "fields": [
+          {
+            "key": "patient_info.emergency_contact.name",
+            "label": "Emergency Contact Name",
+            "widget": "text",
+            "required": true,
+            "max_length": 80,
+            "validation": {
+              "full_name_required": true
+            }
+          },
+          {
+            "key": "patient_info.emergency_contact.relationship",
+            "label": "Emergency Contact Relationship",
+            "widget": "text",
+            "required": true,
+            "max_length": 40
+          },
+          {
+            "key": "patient_info.emergency_contact.phone",
+            "label": "Emergency Contact Phone",
+            "widget": "tel",
+            "required": true,
+            "max_length": 10,
+            "help_text": "Enter 10 digits."
+          },
+          {
+            "key": "patient_info.primary_insurance.carrier",
+            "label": "Primary Insurance Carrier",
+            "widget": "text",
+            "required": true,
+            "max_length": 80
+          },
+          {
+            "key": "patient_info.primary_insurance.insured_ssn_full",
+            "label": "Primary Insured's SSN",
+            "widget": "ssn",
+            "max_length": 11,
+            "help_text": "Format: 123-45-6789"
+          },
+          {
+            "key": "patient_info.primary_insurance.billing_address",
+            "label": "Insurance Billing Address",
+            "widget": "text",
+            "max_length": 120
+          },
+          {
+            "key": "patient_info.primary_insurance.relationship_to_patient",
+            "label": "Relationship to the Patient",
+            "widget": "text",
+            "max_length": 40
+          },
+          {
+            "key": "patient_info.primary_insurance.insured_employer_name",
+            "label": "Insured's Employer Name",
+            "widget": "text",
+            "max_length": 80
+          },
+          {
+            "key": "patient_info.primary_insurance.insured_dob",
+            "label": "Insured's Date of Birth",
+            "widget": "date"
+          },
+          {
+            "key": "patient_info.primary_insurance.policy_number",
+            "label": "Insured's Policy Number",
+            "widget": "text",
+            "max_length": 40
+          },
+          {
+            "key": "patient_info.primary_insurance.group_number",
+            "label": "Insured Group Number",
+            "widget": "text",
+            "max_length": 40
+          },
+          {
+            "key": "patient_info.secondary_insurance.carrier",
+            "label": "Secondary Insurance Carrier",
+            "widget": "text",
+            "max_length": 80
+          },
+          {
+            "key": "patient_info.secondary_insurance.insured_ssn_full",
+            "label": "Secondary Insured's SSN",
+            "widget": "ssn",
+            "max_length": 11,
+            "help_text": "Format: 123-45-6789"
+          },
+          {
+            "key": "patient_info.secondary_insurance.billing_address",
+            "label": "Secondary Insurance Billing Address",
+            "widget": "text",
+            "max_length": 120
+          },
+          {
+            "key": "patient_info.secondary_insurance.relationship_to_patient",
+            "label": "Secondary Relationship to the Patient",
+            "widget": "text",
+            "max_length": 40
+          },
+          {
+            "key": "patient_info.secondary_insurance.insured_employer_name",
+            "label": "Secondary Insured's Employer Name",
+            "widget": "text",
+            "max_length": 80
+          },
+          {
+            "key": "patient_info.secondary_insurance.insured_dob",
+            "label": "Secondary Insured's Date of Birth",
+            "widget": "date"
+          },
+          {
+            "key": "patient_info.secondary_insurance.policy_number",
+            "label": "Secondary Policy Number",
+            "widget": "text",
+            "max_length": 40
+          },
+          {
+            "key": "patient_info.secondary_insurance.group_number",
+            "label": "Secondary Group Number",
+            "widget": "text",
+            "max_length": 40
+          },
+          {
+            "key": "patient_info.pharmacy.name",
+            "label": "Pharmacy Name",
+            "widget": "text",
+            "required": true,
+            "max_length": 80
+          },
+          {
+            "key": "patient_info.pharmacy.address",
+            "label": "Pharmacy Address",
+            "widget": "text",
+            "required": true,
+            "max_length": 120
+          },
+          {
+            "key": "patient_info.pharmacy.phone",
+            "label": "Pharmacy Phone",
+            "widget": "tel",
+            "required": true,
+            "max_length": 10,
+            "help_text": "Enter 10 digits."
+          },
+          {
+            "key": "patient_info.pharmacy.fax",
+            "label": "Pharmacy Fax",
+            "widget": "tel",
+            "required": true,
+            "max_length": 10,
+            "help_text": "Enter 10 digits."
+          },
+          {
+            "key": "patient_info.referral_source",
+            "label": "How did you hear about us?",
+            "widget": "radio",
+            "required": true,
+            "options": [
+              {
+                "label": "Google",
+                "value": "Google"
+              },
+              {
+                "label": "Facebook",
+                "value": "Facebook"
+              },
+              {
+                "label": "Family/friend",
+                "value": "Family/friend"
+              },
+              {
+                "label": "Specialist/other Dr.",
+                "value": "Specialist/other Dr."
+              },
+              {
+                "label": "Other",
+                "value": "Other"
+              }
+            ]
+          },
+          {
+            "key": "patient_info.referral_source_other",
+            "label": "Referral Source (Other)",
+            "widget": "text",
+            "max_length": 80,
+            "visible_when": [
+              {
+                "field": "patient_info.referral_source",
+                "operator": "equals",
+                "value": "Other"
+              }
+            ]
+          },
+          {
+            "key": "patient_info.pharmacy_history_authorization",
+            "label": "Authorize communication with pharmacy to obtain prescription history",
+            "widget": "radio",
+            "required": true,
+            "options": [
+              {
+                "label": "Yes",
+                "value": "Yes"
+              },
+              {
+                "label": "No",
+                "value": "No"
+              }
+            ]
+          },
+          {
+            "key": "patient_info.registration_initials_signature_data",
+            "label": "Authorized Signer's Initials",
+            "widget": "custom_signature_pad",
+            "required": true,
+            "ui": {
+              "component": "SignaturePad",
+              "width": 220,
+              "height": 90,
+              "background": "#ffffff",
+              "pen_color": "#111111",
+              "show_clear_button": true
+            }
+          }
+        ]
+      },
+      {
+        "id": "communication_preferences",
+        "title": "Communication Preferences",
+        "description": "<p><strong>COMMUNICATION AUTHORIZATION</strong></p><p>If Practice needs to communicate with you regarding treatment, your preferred method may be phone call, email, text message, or other method you specify. If you choose phone as preferred method, Practice may need to leave voicemail and you may choose either: (1) detailed treatment information, or (2) callback request only.</p><p>Practice may use email or text messages for treatment and/or marketing communications, including appointment reminders, general health reminders, feedback requests, newsletters, and related Practice information, based on your selection.</p><p>This authorization remains in effect until you submit a later authorization changing your preferences, or revoke/withdraw authorization in writing to Practice. If offered, you are responsible for using the patient portal according to enrollment instructions, protecting login credentials, and promptly notifying Practice of contact-information changes.</p><p>You authorize Practice and Providers to communicate evaluations, treatment, results, and care information to you and/or your Responsible Party and other designated individuals. If required, you will provide password/verification means. You acknowledge authorized disclosures may release Practice and its employees/officers/physicians from legal responsibility related to such authorized disclosures.</p>",
+        "fields": [
+          {
+            "key": "communication_preferences.preferred_method",
+            "label": "Preferred Method of Communication",
+            "widget": "radio",
+            "required": true,
+            "options": [
+              {
+                "label": "Phone call",
+                "value": "Phone call"
+              },
+              {
+                "label": "Email",
+                "value": "Email"
+              },
+              {
+                "label": "Text Message",
+                "value": "Text Message"
+              },
+              {
+                "label": "Other",
+                "value": "Other"
+              }
+            ]
+          },
+          {
+            "key": "communication_preferences.preferred_phone_number",
+            "label": "Phone Call Number",
+            "widget": "tel",
+            "required": true,
+            "max_length": 10,
+            "visible_when": [
+              {
+                "field": "communication_preferences.preferred_method",
+                "operator": "equals",
+                "value": "Phone call"
+              }
+            ]
+          },
+          {
+            "key": "communication_preferences.preferred_email",
+            "label": "Email",
+            "widget": "email",
+            "required": true,
+            "max_length": 80,
+            "visible_when": [
+              {
+                "field": "communication_preferences.preferred_method",
+                "operator": "equals",
+                "value": "Email"
+              }
+            ]
+          },
+          {
+            "key": "communication_preferences.preferred_text_number",
+            "label": "Text Message Number",
+            "widget": "tel",
+            "required": true,
+            "max_length": 10,
+            "visible_when": [
+              {
+                "field": "communication_preferences.preferred_method",
+                "operator": "equals",
+                "value": "Text Message"
+              }
+            ]
+          },
+          {
+            "key": "communication_preferences.preferred_other_detail",
+            "label": "Other Communication Method",
+            "widget": "text",
+            "required": true,
+            "max_length": 80,
+            "visible_when": [
+              {
+                "field": "communication_preferences.preferred_method",
+                "operator": "equals",
+                "value": "Other"
+              }
+            ]
+          },
+          {
+            "key": "communication_preferences.voicemail_preference",
+            "label": "Voicemail Preference",
+            "widget": "radio",
+            "required": true,
+            "options": [
+              {
+                "label": "Leave detailed treatment information",
+                "value": "Leave detailed treatment information"
+              },
+              {
+                "label": "Leave callback request only",
+                "value": "Leave callback request only"
+              }
+            ],
+            "visible_when": [
+              {
+                "field": "communication_preferences.preferred_method",
+                "operator": "equals",
+                "value": "Phone call"
+              }
+            ]
+          },
+          {
+            "key": "communication_preferences.marketing_communication_preference",
+            "label": "Email/Text Authorization",
+            "widget": "radio",
+            "required": true,
+            "options": [
+              {
+                "label": "Authorize treatment and marketing messages",
+                "value": "Authorize treatment and marketing messages"
+              },
+              {
+                "label": "Authorize appointment and health reminders only",
+                "value": "Authorize appointment and health reminders only"
+              },
+              {
+                "label": "Do not authorize email or text messages",
+                "value": "Do not authorize email or text messages"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "privacy_acknowledgement",
+        "title": "Privacy Practices Acknowledgement",
+        "description": "<p><strong>HIPAA CONSENT AND NOTICE OF PRIVACY PRACTICES ACKNOWLEDGEMENT</strong></p><p>In compliance with HIPAA, Practice has made available a Notice of Privacy Practices. You have the right to request a copy before signing, to request a current copy at any time, and to receive updated versions when revised or amended.</p><p>You acknowledge that Protected Health Information may be used/disclosed for: (1) treatment and follow-up among healthcare providers involved in care, (2) obtaining payment from third-party payers when applicable, and (3) normal healthcare operations such as quality assessments and physician certifications.</p><p>You may request restrictions on use/disclosure for treatment, payment, or operations; Practice is not required to agree, but if Practice agrees it is bound by the restriction. You acknowledge records may be released to/from Practice and referring/consulting providers as authorized and required for care coordination.</p><p>You may designate authorized recipients for information regarding your care. You may revoke this consent at any time in writing signed by you or your Responsible Party and delivered to Practice.</p>",
+        "fields": [
+          {
+            "key": "privacy_acknowledgement.signer_role",
+            "label": "Who is signing?",
+            "widget": "radio",
+            "required": true,
+            "help_text": "Choose Patient for self-signing or Authorized Representative for a parent, guardian, or other representative.",
+            "options": [
+              {
+                "label": "Patient",
+                "value": "Patient"
+              },
+              {
+                "label": "Authorized Representative",
+                "value": "Authorized Representative"
+              }
+            ]
+          },
+          {
+            "key": "privacy_acknowledgement.authorized_information_recipients.recipient_1.name",
+            "label": "Authorized Recipient 1 Name",
+            "widget": "text",
+            "max_length": 80
+          },
+          {
+            "key": "privacy_acknowledgement.authorized_information_recipients.recipient_1.relationship",
+            "label": "Authorized Recipient 1 Relationship",
+            "widget": "text",
+            "max_length": 40
+          },
+          {
+            "key": "privacy_acknowledgement.authorized_information_recipients.recipient_1.number",
+            "label": "Authorized Recipient 1 Number",
+            "widget": "tel",
+            "max_length": 10
+          },
+          {
+            "key": "privacy_acknowledgement.authorized_information_recipients.recipient_2.name",
+            "label": "Authorized Recipient 2 Name",
+            "widget": "text",
+            "max_length": 80
+          },
+          {
+            "key": "privacy_acknowledgement.authorized_information_recipients.recipient_2.relationship",
+            "label": "Authorized Recipient 2 Relationship",
+            "widget": "text",
+            "max_length": 40
+          },
+          {
+            "key": "privacy_acknowledgement.authorized_information_recipients.recipient_2.number",
+            "label": "Authorized Recipient 2 Number",
+            "widget": "tel",
+            "max_length": 10
+          },
+          {
+            "key": "patient_info.full_name",
+            "label": "Patient Full Legal Name (Print)",
+            "widget": "text",
+            "required": true,
+            "max_length": 80,
+            "readonly_from_prefill": true,
+            "validation": {
+              "full_name_required": true
+            }
+          },
+          {
+            "key": "patient_info.dob",
+            "label": "Patient DOB",
+            "widget": "date",
+            "required": true,
+            "readonly_from_prefill": true
+          },
+          {
+            "key": "privacy_acknowledgement.parent_or_guardian_name_printed",
+            "label": "Authorized Representative / Parent / Guardian Full Legal Name (Print)",
+            "widget": "text",
+            "max_length": 80,
+            "visible_when": [
+              {
+                "field": "privacy_acknowledgement.signer_role",
+                "operator": "equals",
+                "value": "Authorized Representative"
+              }
+            ],
+            "validation": {
+              "full_name_required": true
+            }
+          },
+          {
+            "key": "privacy_acknowledgement.signature_canvas_data",
+            "label": "Signature of Patient (or Parent/Guardian)",
+            "widget": "custom_signature_pad",
+            "required": true,
+            "ui": {
+              "component": "SignaturePad",
+              "width": 560,
+              "height": 180,
+              "background": "#ffffff",
+              "pen_color": "#111111",
+              "show_clear_button": true
+            }
+          },
+          {
+            "key": "privacy_acknowledgement.signed_date",
+            "label": "Date",
+            "widget": "date",
+            "required": true,
+            "default": "today"
+          }
+        ]
+      },
+      {
+        "id": "media_consent",
+        "title": "Audio/Photo/Video Use Consent",
+        "description": "<p><strong>CONSENT FOR AUDIO/PHOTO/VIDEO USE</strong></p><p>Reliance Medical Center Inc. requests voluntary consent to use your image and medical information and to take/use audio, video, and photographic material in internal and external communications, including website, social media, and patient education/promotional materials in digital or print formats.</p><p>Please select <strong>Do</strong> or <strong>Do Not</strong>. The selected line is marked with \"I\" to match the original paper form format.</p><p>If you select <strong>Do</strong>, you grant permission to capture and publish materials for lawful purposes, and you authorize Practice to edit/alter/share/remix/build upon those materials. You waive privacy rights associated with such uses and understand no payment/remuneration is due for permitted use.</p><p>You are not required to grant this permission for treatment/payment/benefit eligibility. You may request a copy of your signed authorization. You acknowledge that once disclosed/published, information may be subject to re-disclosure by recipients and may no longer be protected by HIPAA/privacy regulations to the same extent.</p><p>You may revoke/withdraw this permission at any time to prohibit future use by sending or hand-delivering written notice to Practice with confirmation of receipt. If not revoked/withdrawn, this authorization remains active in perpetuity.</p>",
+        "fields": [
+          {
+            "key": "media_consent.signer_role",
+            "label": "Who is signing?",
+            "widget": "radio",
+            "required": true,
+            "help_text": "Choose Patient for self-signing or Authorized Representative for a parent, guardian, or other representative.",
+            "options": [
+              {
+                "label": "Patient",
+                "value": "Patient"
+              },
+              {
+                "label": "Authorized Representative",
+                "value": "Authorized Representative"
+              }
+            ]
+          },
+          {
+            "key": "media_consent.permission_choice",
+            "label": "Grant permission to use image and medical information",
+            "widget": "radio",
+            "required": true,
+            "options": [
+              {
+                "label": "Do",
+                "value": "Do"
+              },
+              {
+                "label": "Do Not",
+                "value": "Do Not"
+              }
+            ]
+          },
+          {
+            "key": "media_consent.permission_grant_marker",
+            "label": "Do marker",
+            "widget": "text",
+            "required": true,
+            "read_only": true,
+            "default": "I",
+            "max_length": 1,
+            "visible_when": [
+              {
+                "field": "media_consent.permission_choice",
+                "operator": "equals",
+                "value": "Do"
+              }
+            ]
+          },
+          {
+            "key": "media_consent.permission_do_not_marker",
+            "label": "Do Not marker",
+            "widget": "text",
+            "required": true,
+            "read_only": true,
+            "default": "I",
+            "max_length": 1,
+            "visible_when": [
+              {
+                "field": "media_consent.permission_choice",
+                "operator": "equals",
+                "value": "Do Not"
+              }
+            ]
+          },
+          {
+            "key": "patient_info.full_name",
+            "label": "Patient Full Legal Name (Print)",
+            "widget": "text",
+            "required": true,
+            "max_length": 80,
+            "readonly_from_prefill": true,
+            "validation": {
+              "full_name_required": true
+            }
+          },
+          {
+            "key": "patient_info.dob",
+            "label": "Patient DOB",
+            "widget": "date",
+            "required": true,
+            "readonly_from_prefill": true
+          },
+          {
+            "key": "media_consent.parent_or_guardian_name_printed",
+            "label": "Authorized Representative / Parent / Guardian Full Legal Name (Print)",
+            "widget": "text",
+            "max_length": 80,
+            "visible_when": [
+              {
+                "field": "media_consent.signer_role",
+                "operator": "equals",
+                "value": "Authorized Representative"
+              }
+            ],
+            "validation": {
+              "full_name_required": true
+            }
+          },
+          {
+            "key": "media_consent.signature_canvas_data",
+            "label": "Signature of Patient (or Parent/Guardian)",
+            "widget": "custom_signature_pad",
+            "required": true,
+            "ui": {
+              "component": "SignaturePad",
+              "width": 560,
+              "height": 180,
+              "background": "#ffffff",
+              "pen_color": "#111111",
+              "show_clear_button": true
+            }
+          },
+          {
+            "key": "media_consent.signed_date",
+            "label": "Date",
+            "widget": "date",
+            "required": true,
+            "default": "today"
+          }
+        ]
+      },
+      {
+        "id": "telemedicine_consent",
+        "title": "Telemedicine Consent",
+        "description": "<p><strong>CONSENT TO TELEMEDICINE SERVICES</strong></p><p>You acknowledge Practice may conduct evaluations via telemedicine as defined under Georgia law. You understand you must remain in Georgia during telemedicine visits and that potential risks include interruptions, unauthorized access, and technical difficulties. You may ask questions and request clarification at any time.</p><p>You understand the requirement for at least one in-person visit each year with a Georgia-licensed physician, physician assistant, or nurse practitioner, either through Practice or your Georgia primary care physician.</p><p>By consenting, you voluntarily request telemedicine participation and agree to provide complete and accurate medical history/condition information. You are responsible for your own technology and a quiet/private environment. If sessions are interrupted, alternative communication methods may be used (including audio-only if needed). Practice may require in-person care or referral if telemedicine is not adequate in professional judgment.</p><p>You authorize disclosure of personal/health information necessary for telemedicine care. While safeguards are used, electronic transmission carries confidentiality/security limitations. The telemedicine standard of care is intended to match in-person care. You may withdraw telemedicine consent at any time by notifying Practice; if in-person care is unavailable, referral to another practice/provider may be required.</p>",
+        "fields": [
+          {
+            "key": "telemedicine_consent.signer_role",
+            "label": "Who is signing?",
+            "widget": "radio",
+            "required": true,
+            "help_text": "Choose Patient for self-signing or Authorized Representative for a parent, guardian, or other representative.",
+            "options": [
+              {
+                "label": "Patient",
+                "value": "Patient"
+              },
+              {
+                "label": "Authorized Representative",
+                "value": "Authorized Representative"
+              }
+            ]
+          },
+          {
+            "key": "patient_info.full_name",
+            "label": "Patient Full Legal Name (Print)",
+            "widget": "text",
+            "required": true,
+            "max_length": 80,
+            "readonly_from_prefill": true,
+            "validation": {
+              "full_name_required": true
+            }
+          },
+          {
+            "key": "patient_info.dob",
+            "label": "Patient DOB",
+            "widget": "date",
+            "required": true,
+            "readonly_from_prefill": true
+          },
+          {
+            "key": "telemedicine_consent.parent_or_guardian_name_printed",
+            "label": "Authorized Representative / Parent / Guardian Full Legal Name (Print)",
+            "widget": "text",
+            "max_length": 80,
+            "visible_when": [
+              {
+                "field": "telemedicine_consent.signer_role",
+                "operator": "equals",
+                "value": "Authorized Representative"
+              }
+            ],
+            "validation": {
+              "full_name_required": true
+            }
+          },
+          {
+            "key": "telemedicine_consent.signature_canvas_data",
+            "label": "Signature of Patient (or Parent/Guardian)",
+            "widget": "custom_signature_pad",
+            "required": true,
+            "ui": {
+              "component": "SignaturePad",
+              "width": 560,
+              "height": 180,
+              "background": "#ffffff",
+              "pen_color": "#111111",
+              "show_clear_button": true
+            }
+          },
+          {
+            "key": "telemedicine_consent.signed_date",
+            "label": "Date",
+            "widget": "date",
+            "required": true,
+            "default": "today"
+          }
+        ]
+      },
+      {
+        "id": "financial_responsibility",
+        "title": "Financial Responsibility Agreement",
+        "description": "<p><strong>PATIENT FINANCIAL RESPONSIBILITY AGREEMENT &amp; CANCELLATION POLICY</strong></p><p>You (Patient or Responsible Party) agree to personal financial responsibility for all services rendered by Practice, including amounts not paid by insurance.</p><p><strong>Insurance and payment terms:</strong> if uninsured by an accepted plan, or if updated insurance is not provided/verified, full payment is due at each visit. Co-payments and deductibles are due at time of service. Non-covered/denied charges are your responsibility. If insurer does not pay within 45 days, remaining balance is billed to you and due within 15 days before account is considered past due.</p><p><strong>Claims and records:</strong> you authorize release of medical/other information needed for claim processing and direct payment of benefits to Practice. You remain responsible for balances regardless of insurer payment outcome and must provide requested information to insurer.</p><p><strong>Other charges and nonpayment:</strong> DME, outside labs, consultants, and external services are your responsibility. If account is over 60 days past due, non-emergency scheduling may be restricted and patient termination procedures may apply. Unpaid balances may be sent to collections. Any payment plans/deferrals must be in writing with the office manager; verbal agreements are not accepted.</p><p><strong>No-show policy:</strong> a $50.00 charge applies to missed appointments and cancellations with less than 24 hours notice. Three no-shows within 1 year may result in dismissal for non-compliance. Arrival more than 15 minutes late may be treated as a no-show.</p>",
+        "fields": [
+          {
+            "key": "financial_responsibility.signer_role",
+            "label": "Who is signing?",
+            "widget": "radio",
+            "required": true,
+            "help_text": "Choose Patient for self-signing or Authorized Representative for a parent, guardian, or other representative.",
+            "options": [
+              {
+                "label": "Patient",
+                "value": "Patient"
+              },
+              {
+                "label": "Authorized Representative",
+                "value": "Authorized Representative"
+              }
+            ]
+          },
+          {
+            "key": "patient_info.full_name",
+            "label": "Patient Full Legal Name (Print)",
+            "widget": "text",
+            "required": true,
+            "max_length": 80,
+            "readonly_from_prefill": true,
+            "validation": {
+              "full_name_required": true
+            }
+          },
+          {
+            "key": "patient_info.dob",
+            "label": "Patient DOB",
+            "widget": "date",
+            "required": true,
+            "readonly_from_prefill": true
+          },
+          {
+            "key": "financial_responsibility.parent_or_guardian_name_printed",
+            "label": "Authorized Representative / Parent / Guardian Full Legal Name (Print)",
+            "widget": "text",
+            "max_length": 80,
+            "visible_when": [
+              {
+                "field": "financial_responsibility.signer_role",
+                "operator": "equals",
+                "value": "Authorized Representative"
+              }
+            ],
+            "validation": {
+              "full_name_required": true
+            }
+          },
+          {
+            "key": "financial_responsibility.signature_canvas_data",
+            "label": "Signature of Patient (or Parent/Guardian)",
+            "widget": "custom_signature_pad",
+            "required": true,
+            "ui": {
+              "component": "SignaturePad",
+              "width": 560,
+              "height": 180,
+              "background": "#ffffff",
+              "pen_color": "#111111",
+              "show_clear_button": true
+            }
+          },
+          {
+            "key": "financial_responsibility.signed_date",
+            "label": "Date",
+            "widget": "date",
+            "required": true,
+            "default": "today"
+          }
+        ]
+      }
+    ],
+    "signature_blocks": [
+      {
+        "code": "registration_initials_signature",
+        "label": "Registration Initials",
+        "required": true,
+        "help_text": "Initial in the signature box to confirm the registration details are accurate.",
+        "bind_to_field": "patient_info.registration_initials_signature_data"
+      },
+      {
+        "code": "privacy_ack_signature",
+        "label": "Privacy Acknowledgement Signature",
+        "required": true,
+        "help_text": "Draw the patient or parent/guardian signature.",
+        "bind_to_field": "privacy_acknowledgement.signature_canvas_data"
+      },
+      {
+        "code": "media_consent_signature",
+        "label": "Audio/Photo/Video Consent Signature",
+        "required": true,
+        "help_text": "Draw the patient or parent/guardian signature.",
+        "bind_to_field": "media_consent.signature_canvas_data"
+      },
+      {
+        "code": "telemedicine_signature",
+        "label": "Telemedicine Consent Signature",
+        "required": true,
+        "help_text": "Draw the patient or parent/guardian signature.",
+        "bind_to_field": "telemedicine_consent.signature_canvas_data"
+      },
+      {
+        "code": "financial_responsibility_signature",
+        "label": "Financial Responsibility Signature",
+        "required": true,
+        "help_text": "Draw the patient or parent/guardian signature.",
+        "bind_to_field": "financial_responsibility.signature_canvas_data"
+      }
+    ]
+  }
+}
