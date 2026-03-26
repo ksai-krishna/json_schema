@@ -371,10 +371,6 @@
               "Other"
             ]
           },
-          "referral_source_other": {
-            "type": "string",
-            "maxLength": 80
-          },
           "pharmacy_history_authorization": {
             "type": "string",
             "enum": [
@@ -402,23 +398,6 @@
             "then": {
               "required": [
                 "race_other"
-              ]
-            }
-          },
-          {
-            "if": {
-              "properties": {
-                "referral_source": {
-                  "const": "Other"
-                }
-              },
-              "required": [
-                "referral_source"
-              ]
-            },
-            "then": {
-              "required": [
-                "referral_source_other"
               ]
             }
           }
@@ -885,7 +864,7 @@
             "widget": "date",
             "required": true,
             "default": "today",
-            "help_text": "Use YYYY-MM-DD format."
+            "help_text": "Use DD-MM-YYYY format."
           },
           {
             "key": "patient_info.name.last_name",
@@ -976,7 +955,7 @@
             "widget": "date",
             "required": true,
             "readonly_from_prefill": true,
-            "help_text": "Use YYYY-MM-DD format."
+            "help_text": "Use DD-MM-YYYY format."
           },
           {
             "key": "patient_info.legal_sex",
@@ -1193,7 +1172,7 @@
             "key": "patient_info.primary_insurance.insured_dob",
             "label": "Insured's Date of Birth",
             "widget": "date",
-            "help_text": "Use YYYY-MM-DD format."
+            "help_text": "Use DD-MM-YYYY format."
           },
           {
             "key": "patient_info.primary_insurance.policy_number",
@@ -1248,7 +1227,7 @@
             "key": "patient_info.secondary_insurance.insured_dob",
             "label": "Secondary Insured's Date of Birth",
             "widget": "date",
-            "help_text": "Use YYYY-MM-DD format."
+            "help_text": "Use DD-MM-YYYY format."
           },
           {
             "key": "patient_info.secondary_insurance.policy_number",
@@ -1324,20 +1303,6 @@
               }
             ],
             "help_text": "Select one option."
-          },
-          {
-            "key": "patient_info.referral_source_other",
-            "label": "Referral Source (Other)",
-            "widget": "text",
-            "max_length": 80,
-            "visible_when": [
-              {
-                "field": "patient_info.referral_source",
-                "operator": "equals",
-                "value": "Other"
-              }
-            ],
-            "help_text": "Maximum 80 characters."
           },
           {
             "key": "patient_info.pharmacy_history_authorization",
@@ -1606,7 +1571,7 @@
             "widget": "date",
             "required": true,
             "readonly_from_prefill": true,
-            "help_text": "Use YYYY-MM-DD format."
+            "help_text": "Use DD-MM-YYYY format."
           },
           {
             "key": "privacy_acknowledgement.parent_or_guardian_name_printed",
@@ -1646,7 +1611,7 @@
             "widget": "date",
             "required": true,
             "default": "today",
-            "help_text": "Use YYYY-MM-DD format."
+            "help_text": "Use DD-MM-YYYY format."
           }
         ]
       },
@@ -1748,7 +1713,7 @@
             "widget": "date",
             "required": true,
             "readonly_from_prefill": true,
-            "help_text": "Use YYYY-MM-DD format."
+            "help_text": "Use DD-MM-YYYY format."
           },
           {
             "key": "media_consent.parent_or_guardian_name_printed",
@@ -1788,7 +1753,7 @@
             "widget": "date",
             "required": true,
             "default": "today",
-            "help_text": "Use YYYY-MM-DD format."
+            "help_text": "Use DD-MM-YYYY format."
           }
         ]
       },
@@ -1839,7 +1804,7 @@
             "widget": "date",
             "required": true,
             "readonly_from_prefill": true,
-            "help_text": "Use YYYY-MM-DD format."
+            "help_text": "Use DD-MM-YYYY format."
           },
           {
             "key": "telemedicine_consent.parent_or_guardian_name_printed",
@@ -1879,7 +1844,7 @@
             "widget": "date",
             "required": true,
             "default": "today",
-            "help_text": "Use YYYY-MM-DD format."
+            "help_text": "Use DD-MM-YYYY format."
           }
         ]
       },
@@ -1930,7 +1895,7 @@
             "widget": "date",
             "required": true,
             "readonly_from_prefill": true,
-            "help_text": "Use YYYY-MM-DD format."
+            "help_text": "Use DD-MM-YYYY format."
           },
           {
             "key": "financial_responsibility.parent_or_guardian_name_printed",
@@ -1970,7 +1935,7 @@
             "widget": "date",
             "required": true,
             "default": "today",
-            "help_text": "Use YYYY-MM-DD format."
+            "help_text": "Use DD-MM-YYYY format."
           }
         ]
       }
