@@ -73,7 +73,7 @@
           "full_name": {
             "type": "string",
             "minLength": 1,
-            "maxLength": 80,
+            "maxLength": 50,
             "pattern": "^[A-Za-z]+(?:[ '-][A-Za-z]+)+$"
           },
           "address": {
@@ -94,12 +94,12 @@
               "city": {
                 "type": "string",
                 "minLength": 1,
-                "maxLength": 40
+                "maxLength": 15
               },
               "state": {
                 "type": "string",
                 "minLength": 1,
-                "maxLength": 20
+                "maxLength": 15
               },
               "zip": {
                 "type": "string",
@@ -128,7 +128,7 @@
           "email": {
             "type": "string",
             "format": "email",
-            "maxLength": 80
+            "maxLength": 50
           },
           "dob": {
             "type": "string",
@@ -176,11 +176,11 @@
           },
           "occupation": {
             "type": "string",
-            "maxLength": 60
+            "maxLength": 50
           },
           "employer_name": {
             "type": "string",
-            "maxLength": 80
+            "maxLength": 50
           },
           "employer_address": {
             "type": "string",
@@ -202,7 +202,7 @@
               "name": {
                 "type": "string",
                 "minLength": 1,
-                "maxLength": 80,
+                "maxLength": 50,
                 "pattern": "^[A-Za-z]+(?:[ '-][A-Za-z]+)+$"
               },
               "relationship": {
@@ -226,7 +226,7 @@
               "carrier": {
                 "type": "string",
                 "minLength": 1,
-                "maxLength": 80
+                "maxLength": 50
               },
               "insured_identifier_part_1": {
                 "type": "string",
@@ -259,7 +259,7 @@
               },
               "insured_employer_name": {
                 "type": "string",
-                "maxLength": 80
+                "maxLength": 50
               },
               "insured_dob": {
                 "type": "string",
@@ -282,7 +282,7 @@
             "properties": {
               "carrier": {
                 "type": "string",
-                "maxLength": 80
+                "maxLength": 50
               },
               "insured_identifier_part_1": {
                 "type": "string",
@@ -315,7 +315,7 @@
               },
               "insured_employer_name": {
                 "type": "string",
-                "maxLength": 80
+                "maxLength": 50
               },
               "insured_dob": {
                 "type": "string",
@@ -344,7 +344,7 @@
               "name": {
                 "type": "string",
                 "minLength": 1,
-                "maxLength": 80
+                "maxLength": 50
               },
               "address": {
                 "type": "string",
@@ -428,7 +428,7 @@
           "preferred_email": {
             "type": "string",
             "format": "email",
-            "maxLength": 80
+            "maxLength": 50
           },
           "preferred_text_number": {
             "type": "string",
@@ -436,7 +436,7 @@
           },
           "preferred_other_detail": {
             "type": "string",
-            "maxLength": 80
+            "maxLength": 50
           },
           "voicemail_preference": {
             "type": "string",
@@ -558,7 +558,7 @@
                 "properties": {
                   "name": {
                     "type": "string",
-                    "maxLength": 80
+                    "maxLength": 50
                   },
                   "relationship": {
                     "type": "string",
@@ -577,7 +577,7 @@
                 "properties": {
                   "name": {
                     "type": "string",
-                    "maxLength": 80
+                    "maxLength": 50
                   },
                   "relationship": {
                     "type": "string",
@@ -593,7 +593,7 @@
           },
           "parent_or_guardian_name_printed": {
             "type": "string",
-            "maxLength": 80,
+            "maxLength": 50,
             "pattern": "^[A-Za-z]+(?:[ '-][A-Za-z]+)+$"
           },
           "signature_canvas_data": {
@@ -663,7 +663,7 @@
           },
           "parent_or_guardian_name_printed": {
             "type": "string",
-            "maxLength": 80,
+            "maxLength": 50,
             "pattern": "^[A-Za-z]+(?:[ '-][A-Za-z]+)+$"
           },
           "signature_canvas_data": {
@@ -750,7 +750,7 @@
           },
           "parent_or_guardian_name_printed": {
             "type": "string",
-            "maxLength": 80,
+            "maxLength": 50,
             "pattern": "^[A-Za-z]+(?:[ '-][A-Za-z]+)+$"
           },
           "signature_canvas_data": {
@@ -803,7 +803,7 @@
           },
           "parent_or_guardian_name_printed": {
             "type": "string",
-            "maxLength": 80,
+            "maxLength": 50,
             "pattern": "^[A-Za-z]+(?:[ '-][A-Za-z]+)+$"
           },
           "signature_canvas_data": {
@@ -945,9 +945,9 @@
             "label": "Email Address",
             "widget": "email",
             "required": true,
-            "max_length": 80,
+            "max_length": 50,
             "readonly_from_prefill": true,
-            "help_text": "Maximum 80 characters."
+            "help_text": "Maximum 50 characters."
           },
           {
             "key": "patient_info.dob",
@@ -1082,8 +1082,8 @@
             "key": "patient_info.employer_name",
             "label": "Employer Name",
             "widget": "text",
-            "max_length": 80,
-            "help_text": "Maximum 80 characters."
+            "max_length": 50,
+            "help_text": "Maximum 50 characters."
           },
           {
             "key": "patient_info.employer_address",
@@ -1110,11 +1110,11 @@
             "label": "Emergency Contact Name",
             "widget": "text",
             "required": true,
-            "max_length": 80,
+            "max_length": 50,
             "validation": {
               "full_name_required": true
             },
-            "help_text": "Maximum 80 characters."
+            "help_text": "Maximum 50 characters."
           },
           {
             "key": "patient_info.emergency_contact.relationship",
@@ -1137,8 +1137,8 @@
             "label": "Primary Insurance Carrier",
             "widget": "text",
             "required": true,
-            "max_length": 80,
-            "help_text": "Maximum 80 characters."
+            "max_length": 50,
+            "help_text": "Maximum 50 characters."
           },
           {
             "key": "patient_info.primary_insurance.insured_ssn_full",
@@ -1165,8 +1165,8 @@
             "key": "patient_info.primary_insurance.insured_employer_name",
             "label": "Insured's Employer Name",
             "widget": "text",
-            "max_length": 80,
-            "help_text": "Maximum 80 characters."
+            "max_length": 50,
+            "help_text": "Maximum 50 characters."
           },
           {
             "key": "patient_info.primary_insurance.insured_dob",
@@ -1192,8 +1192,8 @@
             "key": "patient_info.secondary_insurance.carrier",
             "label": "Secondary Insurance Carrier",
             "widget": "text",
-            "max_length": 80,
-            "help_text": "Maximum 80 characters."
+            "max_length": 50,
+            "help_text": "Maximum 50 characters."
           },
           {
             "key": "patient_info.secondary_insurance.insured_ssn_full",
@@ -1220,8 +1220,8 @@
             "key": "patient_info.secondary_insurance.insured_employer_name",
             "label": "Secondary Insured's Employer Name",
             "widget": "text",
-            "max_length": 80,
-            "help_text": "Maximum 80 characters."
+            "max_length": 50,
+            "help_text": "Maximum 50 characters."
           },
           {
             "key": "patient_info.secondary_insurance.insured_dob",
@@ -1248,8 +1248,8 @@
             "label": "Pharmacy Name",
             "widget": "text",
             "required": true,
-            "max_length": 80,
-            "help_text": "Maximum 80 characters."
+            "max_length": 50,
+            "help_text": "Maximum 50 characters."
           },
           {
             "key": "patient_info.pharmacy.address",
@@ -1395,7 +1395,7 @@
             "label": "Email",
             "widget": "email",
             "required": true,
-            "max_length": 80,
+            "max_length": 50,
             "visible_when": [
               {
                 "field": "communication_preferences.preferred_method",
@@ -1403,7 +1403,7 @@
                 "value": "Email"
               }
             ],
-            "help_text": "Maximum 80 characters."
+            "help_text": "Maximum 50 characters."
           },
           {
             "key": "communication_preferences.preferred_text_number",
@@ -1425,7 +1425,7 @@
             "label": "Other Communication Method",
             "widget": "text",
             "required": true,
-            "max_length": 80,
+            "max_length": 50,
             "visible_when": [
               {
                 "field": "communication_preferences.preferred_method",
@@ -1433,7 +1433,7 @@
                 "value": "Other"
               }
             ],
-            "help_text": "Maximum 80 characters."
+            "help_text": "Maximum 50 characters."
           },
           {
             "key": "communication_preferences.voicemail_preference",
@@ -1515,8 +1515,8 @@
             "key": "privacy_acknowledgement.authorized_information_recipients.recipient_1.name",
             "label": "Authorized Recipient 1 Name",
             "widget": "text",
-            "max_length": 80,
-            "help_text": "Maximum 80 characters."
+            "max_length": 50,
+            "help_text": "Maximum 50 characters."
           },
           {
             "key": "privacy_acknowledgement.authorized_information_recipients.recipient_1.relationship",
@@ -1536,8 +1536,8 @@
             "key": "privacy_acknowledgement.authorized_information_recipients.recipient_2.name",
             "label": "Authorized Recipient 2 Name",
             "widget": "text",
-            "max_length": 80,
-            "help_text": "Maximum 80 characters."
+            "max_length": 50,
+            "help_text": "Maximum 50 characters."
           },
           {
             "key": "privacy_acknowledgement.authorized_information_recipients.recipient_2.relationship",
@@ -1558,12 +1558,12 @@
             "label": "Patient Full Legal Name (Print)",
             "widget": "text",
             "required": true,
-            "max_length": 80,
+            "max_length": 50,
             "readonly_from_prefill": true,
             "validation": {
               "full_name_required": true
             },
-            "help_text": "Maximum 80 characters."
+            "help_text": "Maximum 50 characters."
           },
           {
             "key": "patient_info.dob",
@@ -1577,7 +1577,7 @@
             "key": "privacy_acknowledgement.parent_or_guardian_name_printed",
             "label": "Authorized Representative / Parent / Guardian Full Legal Name (Print)",
             "widget": "text",
-            "max_length": 80,
+            "max_length": 50,
             "visible_when": [
               {
                 "field": "privacy_acknowledgement.signer_role",
@@ -1588,7 +1588,7 @@
             "validation": {
               "full_name_required": true
             },
-            "help_text": "Maximum 80 characters."
+            "help_text": "Maximum 50 characters."
           },
           {
             "key": "privacy_acknowledgement.signature_canvas_data",
@@ -1700,12 +1700,12 @@
             "label": "Patient Full Legal Name (Print)",
             "widget": "text",
             "required": true,
-            "max_length": 80,
+            "max_length": 50,
             "readonly_from_prefill": true,
             "validation": {
               "full_name_required": true
             },
-            "help_text": "Maximum 80 characters."
+            "help_text": "Maximum 50 characters."
           },
           {
             "key": "patient_info.dob",
@@ -1719,7 +1719,7 @@
             "key": "media_consent.parent_or_guardian_name_printed",
             "label": "Authorized Representative / Parent / Guardian Full Legal Name (Print)",
             "widget": "text",
-            "max_length": 80,
+            "max_length": 50,
             "visible_when": [
               {
                 "field": "media_consent.signer_role",
@@ -1730,7 +1730,7 @@
             "validation": {
               "full_name_required": true
             },
-            "help_text": "Maximum 80 characters."
+            "help_text": "Maximum 50 characters."
           },
           {
             "key": "media_consent.signature_canvas_data",
@@ -1791,12 +1791,12 @@
             "label": "Patient Full Legal Name (Print)",
             "widget": "text",
             "required": true,
-            "max_length": 80,
+            "max_length": 50,
             "readonly_from_prefill": true,
             "validation": {
               "full_name_required": true
             },
-            "help_text": "Maximum 80 characters."
+            "help_text": "Maximum 50 characters."
           },
           {
             "key": "patient_info.dob",
@@ -1810,7 +1810,7 @@
             "key": "telemedicine_consent.parent_or_guardian_name_printed",
             "label": "Authorized Representative / Parent / Guardian Full Legal Name (Print)",
             "widget": "text",
-            "max_length": 80,
+            "max_length": 50,
             "visible_when": [
               {
                 "field": "telemedicine_consent.signer_role",
@@ -1821,7 +1821,7 @@
             "validation": {
               "full_name_required": true
             },
-            "help_text": "Maximum 80 characters."
+            "help_text": "Maximum 50 characters."
           },
           {
             "key": "telemedicine_consent.signature_canvas_data",
@@ -1882,12 +1882,12 @@
             "label": "Patient Full Legal Name (Print)",
             "widget": "text",
             "required": true,
-            "max_length": 80,
+            "max_length": 50,
             "readonly_from_prefill": true,
             "validation": {
               "full_name_required": true
             },
-            "help_text": "Maximum 80 characters."
+            "help_text": "Maximum 50 characters."
           },
           {
             "key": "patient_info.dob",
@@ -1901,7 +1901,7 @@
             "key": "financial_responsibility.parent_or_guardian_name_printed",
             "label": "Authorized Representative / Parent / Guardian Full Legal Name (Print)",
             "widget": "text",
-            "max_length": 80,
+            "max_length": 50,
             "visible_when": [
               {
                 "field": "financial_responsibility.signer_role",
@@ -1912,7 +1912,7 @@
             "validation": {
               "full_name_required": true
             },
-            "help_text": "Maximum 80 characters."
+            "help_text": "Maximum 50 characters."
           },
           {
             "key": "financial_responsibility.signature_canvas_data",
