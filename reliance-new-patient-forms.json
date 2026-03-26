@@ -884,7 +884,8 @@
             "label": "Patient information as of today's date",
             "widget": "date",
             "required": true,
-            "default": "today"
+            "default": "today",
+            "help_text": "Use YYYY-MM-DD format."
           },
           {
             "key": "patient_info.name.last_name",
@@ -916,21 +917,24 @@
             "label": "Street Address",
             "widget": "text",
             "required": true,
-            "max_length": 50
+            "max_length": 50,
+            "help_text": "Maximum 50 characters."
           },
           {
             "key": "patient_info.address.city",
             "label": "City",
             "widget": "text",
             "required": true,
-            "max_length": 40
+            "max_length": 40,
+            "help_text": "Maximum 40 characters."
           },
           {
             "key": "patient_info.address.state",
             "label": "State",
             "widget": "text",
             "required": true,
-            "max_length": 20
+            "max_length": 20,
+            "help_text": "Maximum 20 characters."
           },
           {
             "key": "patient_info.address.zip",
@@ -963,14 +967,16 @@
             "widget": "email",
             "required": true,
             "max_length": 80,
-            "readonly_from_prefill": true
+            "readonly_from_prefill": true,
+            "help_text": "Maximum 80 characters."
           },
           {
             "key": "patient_info.dob",
             "label": "Birth Date",
             "widget": "date",
             "required": true,
-            "readonly_from_prefill": true
+            "readonly_from_prefill": true,
+            "help_text": "Use YYYY-MM-DD format."
           },
           {
             "key": "patient_info.legal_sex",
@@ -986,7 +992,8 @@
                 "label": "F",
                 "value": "F"
               }
-            ]
+            ],
+            "help_text": "Select one option."
           },
           {
             "key": "patient_info.marital_status",
@@ -1010,7 +1017,8 @@
                 "label": "Divorced",
                 "value": "Divorced"
               }
-            ]
+            ],
+            "help_text": "Select one option."
           },
           {
             "key": "patient_info.race",
@@ -1046,7 +1054,8 @@
                 "label": "Declined",
                 "value": "Declined"
               }
-            ]
+            ],
+            "help_text": "Select one option."
           },
           {
             "key": "patient_info.race_other",
@@ -1059,7 +1068,8 @@
                 "operator": "equals",
                 "value": "Other"
               }
-            ]
+            ],
+            "help_text": "Maximum 40 characters."
           },
           {
             "key": "patient_info.ethnicity",
@@ -1079,25 +1089,29 @@
                 "label": "Declined",
                 "value": "Declined"
               }
-            ]
+            ],
+            "help_text": "Select one option."
           },
           {
             "key": "patient_info.occupation",
             "label": "Occupation",
             "widget": "text",
-            "max_length": 60
+            "max_length": 60,
+            "help_text": "Maximum 60 characters."
           },
           {
             "key": "patient_info.employer_name",
             "label": "Employer Name",
             "widget": "text",
-            "max_length": 80
+            "max_length": 80,
+            "help_text": "Maximum 80 characters."
           },
           {
             "key": "patient_info.employer_address",
             "label": "Employer Address",
             "widget": "text",
-            "max_length": 50
+            "max_length": 50,
+            "help_text": "Maximum 50 characters."
           },
           {
             "key": "patient_info.employer_phone",
@@ -1120,14 +1134,16 @@
             "max_length": 80,
             "validation": {
               "full_name_required": true
-            }
+            },
+            "help_text": "Maximum 80 characters."
           },
           {
             "key": "patient_info.emergency_contact.relationship",
             "label": "Emergency Contact Relationship",
             "widget": "text",
             "required": true,
-            "max_length": 40
+            "max_length": 40,
+            "help_text": "Maximum 40 characters."
           },
           {
             "key": "patient_info.emergency_contact.phone",
@@ -1142,7 +1158,8 @@
             "label": "Primary Insurance Carrier",
             "widget": "text",
             "required": true,
-            "max_length": 80
+            "max_length": 80,
+            "help_text": "Maximum 80 characters."
           },
           {
             "key": "patient_info.primary_insurance.insured_ssn_full",
@@ -1155,42 +1172,49 @@
             "key": "patient_info.primary_insurance.billing_address",
             "label": "Insurance Billing Address",
             "widget": "text",
-            "max_length": 50
+            "max_length": 50,
+            "help_text": "Maximum 50 characters."
           },
           {
             "key": "patient_info.primary_insurance.relationship_to_patient",
             "label": "Relationship to the Patient",
             "widget": "text",
-            "max_length": 40
+            "max_length": 40,
+            "help_text": "Maximum 40 characters."
           },
           {
             "key": "patient_info.primary_insurance.insured_employer_name",
             "label": "Insured's Employer Name",
             "widget": "text",
-            "max_length": 80
+            "max_length": 80,
+            "help_text": "Maximum 80 characters."
           },
           {
             "key": "patient_info.primary_insurance.insured_dob",
             "label": "Insured's Date of Birth",
-            "widget": "date"
+            "widget": "date",
+            "help_text": "Use YYYY-MM-DD format."
           },
           {
             "key": "patient_info.primary_insurance.policy_number",
             "label": "Insured's Policy Number",
             "widget": "text",
-            "max_length": 20
+            "max_length": 20,
+            "help_text": "Maximum 20 characters."
           },
           {
             "key": "patient_info.primary_insurance.group_number",
             "label": "Insured Group Number",
             "widget": "text",
-            "max_length": 20
+            "max_length": 20,
+            "help_text": "Maximum 20 characters."
           },
           {
             "key": "patient_info.secondary_insurance.carrier",
             "label": "Secondary Insurance Carrier",
             "widget": "text",
-            "max_length": 80
+            "max_length": 80,
+            "help_text": "Maximum 80 characters."
           },
           {
             "key": "patient_info.secondary_insurance.insured_ssn_full",
@@ -1203,50 +1227,58 @@
             "key": "patient_info.secondary_insurance.billing_address",
             "label": "Secondary Insurance Billing Address",
             "widget": "text",
-            "max_length": 50
+            "max_length": 50,
+            "help_text": "Maximum 50 characters."
           },
           {
             "key": "patient_info.secondary_insurance.relationship_to_patient",
             "label": "Secondary Relationship to the Patient",
             "widget": "text",
-            "max_length": 40
+            "max_length": 40,
+            "help_text": "Maximum 40 characters."
           },
           {
             "key": "patient_info.secondary_insurance.insured_employer_name",
             "label": "Secondary Insured's Employer Name",
             "widget": "text",
-            "max_length": 80
+            "max_length": 80,
+            "help_text": "Maximum 80 characters."
           },
           {
             "key": "patient_info.secondary_insurance.insured_dob",
             "label": "Secondary Insured's Date of Birth",
-            "widget": "date"
+            "widget": "date",
+            "help_text": "Use YYYY-MM-DD format."
           },
           {
             "key": "patient_info.secondary_insurance.policy_number",
             "label": "Secondary Policy Number",
             "widget": "text",
-            "max_length": 20
+            "max_length": 20,
+            "help_text": "Maximum 20 characters."
           },
           {
             "key": "patient_info.secondary_insurance.group_number",
             "label": "Secondary Group Number",
             "widget": "text",
-            "max_length": 20
+            "max_length": 20,
+            "help_text": "Maximum 20 characters."
           },
           {
             "key": "patient_info.pharmacy.name",
             "label": "Pharmacy Name",
             "widget": "text",
             "required": true,
-            "max_length": 80
+            "max_length": 80,
+            "help_text": "Maximum 80 characters."
           },
           {
             "key": "patient_info.pharmacy.address",
             "label": "Pharmacy Address",
             "widget": "text",
             "required": true,
-            "max_length": 50
+            "max_length": 50,
+            "help_text": "Maximum 50 characters."
           },
           {
             "key": "patient_info.pharmacy.phone",
@@ -1290,7 +1322,8 @@
                 "label": "Other",
                 "value": "Other"
               }
-            ]
+            ],
+            "help_text": "Select one option."
           },
           {
             "key": "patient_info.referral_source_other",
@@ -1303,7 +1336,8 @@
                 "operator": "equals",
                 "value": "Other"
               }
-            ]
+            ],
+            "help_text": "Maximum 80 characters."
           },
           {
             "key": "patient_info.pharmacy_history_authorization",
@@ -1319,7 +1353,8 @@
                 "label": "No",
                 "value": "No"
               }
-            ]
+            ],
+            "help_text": "Select one option."
           },
           {
             "key": "patient_info.registration_initials_signature_data",
@@ -1333,7 +1368,8 @@
               "background": "#ffffff",
               "pen_color": "#111111",
               "show_clear_button": true
-            }
+            },
+            "help_text": "Sign in the box below."
           }
         ]
       },
@@ -1346,7 +1382,8 @@
             "key": "communication_preferences.agree_general_patient_consents",
             "label": "I have read and agree to the General Patient Consents terms",
             "widget": "checkbox",
-            "required": true
+            "required": true,
+            "help_text": "Check to confirm and continue."
           },
           {
             "key": "communication_preferences.preferred_method",
@@ -1370,7 +1407,8 @@
                 "label": "Other",
                 "value": "Other"
               }
-            ]
+            ],
+            "help_text": "Select one option."
           },
           {
             "key": "communication_preferences.preferred_phone_number",
@@ -1384,7 +1422,8 @@
                 "operator": "equals",
                 "value": "Phone call"
               }
-            ]
+            ],
+            "help_text": "Maximum 10 characters."
           },
           {
             "key": "communication_preferences.preferred_email",
@@ -1398,7 +1437,8 @@
                 "operator": "equals",
                 "value": "Email"
               }
-            ]
+            ],
+            "help_text": "Maximum 80 characters."
           },
           {
             "key": "communication_preferences.preferred_text_number",
@@ -1412,7 +1452,8 @@
                 "operator": "equals",
                 "value": "Text Message"
               }
-            ]
+            ],
+            "help_text": "Maximum 10 characters."
           },
           {
             "key": "communication_preferences.preferred_other_detail",
@@ -1426,7 +1467,8 @@
                 "operator": "equals",
                 "value": "Other"
               }
-            ]
+            ],
+            "help_text": "Maximum 80 characters."
           },
           {
             "key": "communication_preferences.voicemail_preference",
@@ -1449,7 +1491,8 @@
                 "operator": "equals",
                 "value": "Phone call"
               }
-            ]
+            ],
+            "help_text": "Select one option."
           },
           {
             "key": "communication_preferences.marketing_communication_preference",
@@ -1469,7 +1512,8 @@
                 "label": "Do not authorize email or text messages",
                 "value": "Do not authorize email or text messages"
               }
-            ]
+            ],
+            "help_text": "Select one option."
           }
         ]
       },
@@ -1482,7 +1526,8 @@
             "key": "privacy_acknowledgement.agree_privacy_practices",
             "label": "I acknowledge and agree to the Notice of Privacy Practices terms",
             "widget": "checkbox",
-            "required": true
+            "required": true,
+            "help_text": "Check to confirm and continue."
           },
           {
             "key": "privacy_acknowledgement.signer_role",
@@ -1505,37 +1550,43 @@
             "key": "privacy_acknowledgement.authorized_information_recipients.recipient_1.name",
             "label": "Authorized Recipient 1 Name",
             "widget": "text",
-            "max_length": 80
+            "max_length": 80,
+            "help_text": "Maximum 80 characters."
           },
           {
             "key": "privacy_acknowledgement.authorized_information_recipients.recipient_1.relationship",
             "label": "Authorized Recipient 1 Relationship",
             "widget": "text",
-            "max_length": 40
+            "max_length": 40,
+            "help_text": "Maximum 40 characters."
           },
           {
             "key": "privacy_acknowledgement.authorized_information_recipients.recipient_1.number",
             "label": "Authorized Recipient 1 Number",
             "widget": "tel",
-            "max_length": 10
+            "max_length": 10,
+            "help_text": "Maximum 10 characters."
           },
           {
             "key": "privacy_acknowledgement.authorized_information_recipients.recipient_2.name",
             "label": "Authorized Recipient 2 Name",
             "widget": "text",
-            "max_length": 80
+            "max_length": 80,
+            "help_text": "Maximum 80 characters."
           },
           {
             "key": "privacy_acknowledgement.authorized_information_recipients.recipient_2.relationship",
             "label": "Authorized Recipient 2 Relationship",
             "widget": "text",
-            "max_length": 40
+            "max_length": 40,
+            "help_text": "Maximum 40 characters."
           },
           {
             "key": "privacy_acknowledgement.authorized_information_recipients.recipient_2.number",
             "label": "Authorized Recipient 2 Number",
             "widget": "tel",
-            "max_length": 10
+            "max_length": 10,
+            "help_text": "Maximum 10 characters."
           },
           {
             "key": "patient_info.full_name",
@@ -1546,14 +1597,16 @@
             "readonly_from_prefill": true,
             "validation": {
               "full_name_required": true
-            }
+            },
+            "help_text": "Maximum 80 characters."
           },
           {
             "key": "patient_info.dob",
             "label": "Patient DOB",
             "widget": "date",
             "required": true,
-            "readonly_from_prefill": true
+            "readonly_from_prefill": true,
+            "help_text": "Use YYYY-MM-DD format."
           },
           {
             "key": "privacy_acknowledgement.parent_or_guardian_name_printed",
@@ -1569,7 +1622,8 @@
             ],
             "validation": {
               "full_name_required": true
-            }
+            },
+            "help_text": "Maximum 80 characters."
           },
           {
             "key": "privacy_acknowledgement.signature_canvas_data",
@@ -1583,14 +1637,16 @@
               "background": "#ffffff",
               "pen_color": "#111111",
               "show_clear_button": true
-            }
+            },
+            "help_text": "Sign in the box below."
           },
           {
             "key": "privacy_acknowledgement.signed_date",
             "label": "Date",
             "widget": "date",
             "required": true,
-            "default": "today"
+            "default": "today",
+            "help_text": "Use YYYY-MM-DD format."
           }
         ]
       },
@@ -1603,7 +1659,8 @@
             "key": "media_consent.agree_media_consent",
             "label": "I have read and agree to the Audio/Photo/Video Use Consent terms",
             "widget": "checkbox",
-            "required": true
+            "required": true,
+            "help_text": "Check to confirm and continue."
           },
           {
             "key": "media_consent.signer_role",
@@ -1636,7 +1693,8 @@
                 "label": "Do Not",
                 "value": "Do Not"
               }
-            ]
+            ],
+            "help_text": "Select one option."
           },
           {
             "key": "media_consent.permission_grant_marker",
@@ -1652,7 +1710,8 @@
                 "operator": "equals",
                 "value": "Do"
               }
-            ]
+            ],
+            "help_text": "Maximum 1 characters."
           },
           {
             "key": "media_consent.permission_do_not_marker",
@@ -1668,7 +1727,8 @@
                 "operator": "equals",
                 "value": "Do Not"
               }
-            ]
+            ],
+            "help_text": "Maximum 1 characters."
           },
           {
             "key": "patient_info.full_name",
@@ -1679,14 +1739,16 @@
             "readonly_from_prefill": true,
             "validation": {
               "full_name_required": true
-            }
+            },
+            "help_text": "Maximum 80 characters."
           },
           {
             "key": "patient_info.dob",
             "label": "Patient DOB",
             "widget": "date",
             "required": true,
-            "readonly_from_prefill": true
+            "readonly_from_prefill": true,
+            "help_text": "Use YYYY-MM-DD format."
           },
           {
             "key": "media_consent.parent_or_guardian_name_printed",
@@ -1702,7 +1764,8 @@
             ],
             "validation": {
               "full_name_required": true
-            }
+            },
+            "help_text": "Maximum 80 characters."
           },
           {
             "key": "media_consent.signature_canvas_data",
@@ -1716,14 +1779,16 @@
               "background": "#ffffff",
               "pen_color": "#111111",
               "show_clear_button": true
-            }
+            },
+            "help_text": "Sign in the box below."
           },
           {
             "key": "media_consent.signed_date",
             "label": "Date",
             "widget": "date",
             "required": true,
-            "default": "today"
+            "default": "today",
+            "help_text": "Use YYYY-MM-DD format."
           }
         ]
       },
@@ -1736,7 +1801,8 @@
             "key": "telemedicine_consent.agree_telemedicine_consent",
             "label": "I have read and agree to the Telemedicine Consent terms",
             "widget": "checkbox",
-            "required": true
+            "required": true,
+            "help_text": "Check to confirm and continue."
           },
           {
             "key": "telemedicine_consent.signer_role",
@@ -1764,14 +1830,16 @@
             "readonly_from_prefill": true,
             "validation": {
               "full_name_required": true
-            }
+            },
+            "help_text": "Maximum 80 characters."
           },
           {
             "key": "patient_info.dob",
             "label": "Patient DOB",
             "widget": "date",
             "required": true,
-            "readonly_from_prefill": true
+            "readonly_from_prefill": true,
+            "help_text": "Use YYYY-MM-DD format."
           },
           {
             "key": "telemedicine_consent.parent_or_guardian_name_printed",
@@ -1787,7 +1855,8 @@
             ],
             "validation": {
               "full_name_required": true
-            }
+            },
+            "help_text": "Maximum 80 characters."
           },
           {
             "key": "telemedicine_consent.signature_canvas_data",
@@ -1801,14 +1870,16 @@
               "background": "#ffffff",
               "pen_color": "#111111",
               "show_clear_button": true
-            }
+            },
+            "help_text": "Sign in the box below."
           },
           {
             "key": "telemedicine_consent.signed_date",
             "label": "Date",
             "widget": "date",
             "required": true,
-            "default": "today"
+            "default": "today",
+            "help_text": "Use YYYY-MM-DD format."
           }
         ]
       },
@@ -1821,7 +1892,8 @@
             "key": "financial_responsibility.agree_financial_responsibility",
             "label": "I have read and agree to the Financial Responsibility Agreement terms",
             "widget": "checkbox",
-            "required": true
+            "required": true,
+            "help_text": "Check to confirm and continue."
           },
           {
             "key": "financial_responsibility.signer_role",
@@ -1849,14 +1921,16 @@
             "readonly_from_prefill": true,
             "validation": {
               "full_name_required": true
-            }
+            },
+            "help_text": "Maximum 80 characters."
           },
           {
             "key": "patient_info.dob",
             "label": "Patient DOB",
             "widget": "date",
             "required": true,
-            "readonly_from_prefill": true
+            "readonly_from_prefill": true,
+            "help_text": "Use YYYY-MM-DD format."
           },
           {
             "key": "financial_responsibility.parent_or_guardian_name_printed",
@@ -1872,7 +1946,8 @@
             ],
             "validation": {
               "full_name_required": true
-            }
+            },
+            "help_text": "Maximum 80 characters."
           },
           {
             "key": "financial_responsibility.signature_canvas_data",
@@ -1886,14 +1961,16 @@
               "background": "#ffffff",
               "pen_color": "#111111",
               "show_clear_button": true
-            }
+            },
+            "help_text": "Sign in the box below."
           },
           {
             "key": "financial_responsibility.signed_date",
             "label": "Date",
             "widget": "date",
             "required": true,
-            "default": "today"
+            "default": "today",
+            "help_text": "Use YYYY-MM-DD format."
           }
         ]
       }
