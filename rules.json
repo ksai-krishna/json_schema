@@ -293,7 +293,7 @@
     {
       "source_path": "patient_info.pharmacy.fax",
       "target_field": "pharmacy_fax",
-      "required": true
+      "required": false
     },
     {
       "source_path": "patient_info.referral_source",
@@ -351,13 +351,13 @@
     {
       "source_path": "communication_preferences.preferred_method",
       "target_field": "communication_preference_email",
-      "transform": "equals:Email",
+      "transform": "equals:Text Message",
       "required": true
     },
     {
       "source_path": "communication_preferences.preferred_method",
       "target_field": "communication_preference_text_message",
-      "transform": "equals:Text Message",
+      "transform": "equals:Email",
       "required": true
     },
     {
@@ -372,11 +372,11 @@
     },
     {
       "source_path": "communication_preferences.preferred_text_number",
-      "target_field": "communication_preference_text_number"
+      "target_field": "communication_preference_email_address"
     },
     {
       "source_path": "communication_preferences.preferred_email",
-      "target_field": "communication_preference_email_address"
+      "target_field": "communication_preference_text_number"
     },
     {
       "source_path": "communication_preferences.preferred_other_detail",

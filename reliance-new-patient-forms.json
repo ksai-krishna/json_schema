@@ -89,7 +89,7 @@
               "street": {
                 "type": "string",
                 "minLength": 1,
-                "maxLength": 80
+                "maxLength": 50
               },
               "city": {
                 "type": "string",
@@ -184,7 +184,7 @@
           },
           "employer_address": {
             "type": "string",
-            "maxLength": 120
+            "maxLength": 50
           },
           "employer_phone": {
             "type": "string",
@@ -251,7 +251,7 @@
               },
               "billing_address": {
                 "type": "string",
-                "maxLength": 120
+                "maxLength": 50
               },
               "relationship_to_patient": {
                 "type": "string",
@@ -267,11 +267,11 @@
               },
               "policy_number": {
                 "type": "string",
-                "maxLength": 40
+                "maxLength": 20
               },
               "group_number": {
                 "type": "string",
-                "maxLength": 40
+                "maxLength": 20
               }
             }
           },
@@ -307,7 +307,7 @@
               },
               "billing_address": {
                 "type": "string",
-                "maxLength": 120
+                "maxLength": 50
               },
               "relationship_to_patient": {
                 "type": "string",
@@ -323,11 +323,11 @@
               },
               "policy_number": {
                 "type": "string",
-                "maxLength": 40
+                "maxLength": 20
               },
               "group_number": {
                 "type": "string",
-                "maxLength": 40
+                "maxLength": 20
               }
             }
           },
@@ -349,7 +349,7 @@
               "address": {
                 "type": "string",
                 "minLength": 1,
-                "maxLength": 120
+                "maxLength": 50
               },
               "phone": {
                 "type": "string",
@@ -896,7 +896,7 @@
             "label": "Street Address",
             "widget": "text",
             "required": true,
-            "max_length": 80
+            "max_length": 50
           },
           {
             "key": "patient_info.address.city",
@@ -1077,7 +1077,7 @@
             "key": "patient_info.employer_address",
             "label": "Employer Address",
             "widget": "text",
-            "max_length": 120
+            "max_length": 50
           },
           {
             "key": "patient_info.employer_phone",
@@ -1135,7 +1135,7 @@
             "key": "patient_info.primary_insurance.billing_address",
             "label": "Insurance Billing Address",
             "widget": "text",
-            "max_length": 120
+            "max_length": 50
           },
           {
             "key": "patient_info.primary_insurance.relationship_to_patient",
@@ -1158,13 +1158,13 @@
             "key": "patient_info.primary_insurance.policy_number",
             "label": "Insured's Policy Number",
             "widget": "text",
-            "max_length": 40
+            "max_length": 20
           },
           {
             "key": "patient_info.primary_insurance.group_number",
             "label": "Insured Group Number",
             "widget": "text",
-            "max_length": 40
+            "max_length": 20
           },
           {
             "key": "patient_info.secondary_insurance.carrier",
@@ -1183,7 +1183,7 @@
             "key": "patient_info.secondary_insurance.billing_address",
             "label": "Secondary Insurance Billing Address",
             "widget": "text",
-            "max_length": 120
+            "max_length": 50
           },
           {
             "key": "patient_info.secondary_insurance.relationship_to_patient",
@@ -1206,13 +1206,13 @@
             "key": "patient_info.secondary_insurance.policy_number",
             "label": "Secondary Policy Number",
             "widget": "text",
-            "max_length": 40
+            "max_length": 20
           },
           {
             "key": "patient_info.secondary_insurance.group_number",
             "label": "Secondary Group Number",
             "widget": "text",
-            "max_length": 40
+            "max_length": 20
           },
           {
             "key": "patient_info.pharmacy.name",
@@ -1226,7 +1226,7 @@
             "label": "Pharmacy Address",
             "widget": "text",
             "required": true,
-            "max_length": 120
+            "max_length": 50
           },
           {
             "key": "patient_info.pharmacy.phone",
@@ -1320,7 +1320,7 @@
       {
         "id": "communication_preferences",
         "title": "Communication Preferences",
-        "description": "<p><strong>COMMUNICATION AUTHORIZATION</strong></p><p>If Practice needs to communicate with you regarding treatment, your preferred method may be phone call, email, text message, or other method you specify. If you choose phone as preferred method, Practice may need to leave voicemail and you may choose either: (1) detailed treatment information, or (2) callback request only.</p><p>Practice may use email or text messages for treatment and/or marketing communications, including appointment reminders, general health reminders, feedback requests, newsletters, and related Practice information, based on your selection.</p><p>This authorization remains in effect until you submit a later authorization changing your preferences, or revoke/withdraw authorization in writing to Practice. If offered, you are responsible for using the patient portal according to enrollment instructions, protecting login credentials, and promptly notifying Practice of contact-information changes.</p><p>You authorize Practice and Providers to communicate evaluations, treatment, results, and care information to you and/or your Responsible Party and other designated individuals. If required, you will provide password/verification means. You acknowledge authorized disclosures may release Practice and its employees/officers/physicians from legal responsibility related to such authorized disclosures.</p>",
+        "description": "<div style=\"font-size: 1.125rem; line-height: 1.9;\"><p><strong>GENERAL PATIENT CONSENTS</strong></p><p>The General Patient Consents include a Consent for Treatment, a Consent for Communication and Contact, and a Consent for Use and Disclosure of Protected Health Information and Acknowledgment of Notice of Privacy Practices. Please review all consents and the attached Notice of Privacy Practices and sign on page 3/4.</p><p><strong>CONSENT FOR TREATMENT</strong></p><p>I, the undersigned Patient or Responsible Party1, hereby authorize Reliance Medical Center Inc. and its staff and health care provider(s) ('Practice'), to examine and treat me, as deemed necessary to provide primary care and related services as determined appropriate by the evaluating provider. I acknowledge that no guarantees or assurances have been made to me as the result of services, procedures, treatments, or evaluations through the Practice. I intend this consent to cover the entire course of treatment. I understand that any questions I may have regarding the potential side effects, complications, or outcome of any course of treatment or care may be directed to my Provider at the Practice. I acknowledge by my signature below that although a good outcome is expected, and a reasonable effort has been made to establish realistic expectations, there cannot be any warranty, expressed or implied, as to the results that may be obtained through any course of treatment or care. I request and consent to be transported by Practice staff and/or emergency medical services to a hospital or emergency medical facility in the event of a medical emergency during the course of my treatment at the Practice.</p><p><strong>CONSENT FOR COMMUNICATION AND CONTACT</strong></p><p>I acknowledge that communications with the Practice using email, facsimile, video chat, instant messaging, and cell phone are not guaranteed to be secure or confidential methods of communications. I accept the risk inherent in the use of any of the above-indicated communication methods for diagnoses, treatment, or any other healthcare or business-related reason. I expressly waive any obligation to guarantee confidentiality with respect to correspondence using such means of communication. I acknowledge that all such communications may become a part of my medical records.</p><p>I authorize the Practice to contact me according to the policies of the Practice regarding facets of my care, including requests for information, verification of payment, and reminders for appointments. I understand and accept that Practice may leave messages on home or cell phone answering systems or send reminder cards by U.S. mail, email or text message, according to the policies of the Practice.</p><p>If Practice needs to communicate with me regarding my treatment, my preferred method of communication is as follows (check one): Phone call, Email, Text Message, or Other.</p><p>I understand that if I have chosen a phone call as my preferred method of communication, Practice may be required to leave a voicemail for me regarding my treatment. In such an event, Practice should (check one): Leave a message with detailed information regarding my treatment, or Leave a message requesting that I call Practice at a specified phone number.</p><p>I understand that, from time to time, Practice may utilize email or text messages to communicate with me both about my treatment and for marketing purposes. I understand that these emails or text messages may include appointment reminders, general health reminders, feedback requests, newsletters and other information relating to Practice. Accordingly, I (check one): Authorize Practice to email or text me for both treatment and marketing purposes, Authorize Practice to email or text me appointment and health reminders only, or Do not authorize Practice to email or text me.</p><p>I understand that this authorization will remain in effect until I either submit a subsequent authorization changing my above stated preferences, or I revoke or withdraw this authorization in writing. To do so, I must send written notice to the Practice.</p><p>If offered by the Practice, I am responsible for utilizing the Practice's electronic medical record patient portal according to the instructions provided at the time of enrollment and for taking reasonable precautions to ensure no unauthorized access to my login information or confidential information. I agree not to access any information through the Practice's website regarding anyone other than myself and not to falsify or misrepresent identity or authority to act on behalf of another person. I must promptly notify the Practice of any change in contact information previously provided to the Practice.</p><p>I understand that prior to participating in any telemedicine sessions, I will be required to sign the Practice's consent to telemedicine services. I authorize the Practice and the Providers to communicate information about my evaluations, treatment, results, and care to me and/or the Responsible Party and other individuals designated by me or the Responsible Party. If required by the Practice, I will provide those individuals with a password or other verification means. I acknowledge and agree that Practice and its employees, officers and physicians are released from any legal responsibility of liability for or resulting from the authorized disclosure of my health or billing information.</p></div>",
         "fields": [
           {
             "key": "communication_preferences.preferred_method",
@@ -1450,7 +1450,7 @@
       {
         "id": "privacy_acknowledgement",
         "title": "Privacy Practices Acknowledgement",
-        "description": "<p><strong>HIPAA CONSENT AND NOTICE OF PRIVACY PRACTICES ACKNOWLEDGEMENT</strong></p><p>In compliance with HIPAA, Practice has made available a Notice of Privacy Practices. You have the right to request a copy before signing, to request a current copy at any time, and to receive updated versions when revised or amended.</p><p>You acknowledge that Protected Health Information may be used/disclosed for: (1) treatment and follow-up among healthcare providers involved in care, (2) obtaining payment from third-party payers when applicable, and (3) normal healthcare operations such as quality assessments and physician certifications.</p><p>You may request restrictions on use/disclosure for treatment, payment, or operations; Practice is not required to agree, but if Practice agrees it is bound by the restriction. You acknowledge records may be released to/from Practice and referring/consulting providers as authorized and required for care coordination.</p><p>You may designate authorized recipients for information regarding your care. You may revoke this consent at any time in writing signed by you or your Responsible Party and delivered to Practice.</p>",
+        "description": "<div style=\"font-size: 1.125rem; line-height: 1.9;\"><p><strong>CONSENT FOR USE AND DISCLOSURE OF PROTECTED HEALTH INFORMATION AND ACKNOWLEDGEMENT OF NOTICE OF PRIVACY PRACTICES</strong></p><p>In compliance with the Health Insurance Portability and Accountability Act of 1996 (HIPAA), the Practice has made available to me, a Notice of Privacy Practices. I have the right to request a copy of the Notice of Privacy Practices prior to signing this consent. A current copy of the Notice is attached to this document and posted on the Practice's website at all times and may be printed from the website. The terms of the Notice of Privacy Practices may be revised or amended, and I have the right to request a current copy of the Notice of Privacy Practices at any time. The Notice of Privacy Practices provides information about how the Practice may use and disclose Protected Health Information about me. The Notice of Privacy Practices contains a section explaining my rights regarding my Protected Health Information. I understand that this information can and will be used to: Conduct, plan and direct my treatment and follow-up among the multiple health care providers who may be involved in that treatment directly and indirectly; Obtain payment from third-party payers, if applicable; and Conduct normal health care operations, such as quality assessments and physician certifications. I acknowledge that I have been provided the Notice of Privacy Practices containing a more complete description of the uses and disclosures of my health information.</p><p>I have the right to request that the Practice restrict or limit how Protected Health Information is used or disclosed for treatment, payment, or health care operations. I also understand the Practice is not required to agree to my requested restrictions, but if the Practice does agree, then it is bound to abide by such restrictions. I acknowledge that my medical information/records will be released to Practice. I further acknowledge that my medical information/records will be released from Practice to any referring/consulting providers.</p><p>By signing this General Patient Consents, I acknowledge that I have received a current copy of the Notice of Privacy Practices. At any time, I have the right to revoke this consent by submitting my request in writing and signed by me or Responsible Party, to the Practice.</p><p>I hereby authorize the following person or persons to receive medical information regarding my care: Name, Relationship, Number.</p><p>I have read the General Patient Consents document in its entirety and agree to be bound by all of its terms and conditions as described above. I acknowledge and agree that I have been given the opportunity to ask any questions and have either (i) declined the opportunity to do so, or (ii) had all my questions answered to my satisfaction.</p></div>",
         "fields": [
           {
             "key": "privacy_acknowledgement.signer_role",
@@ -1565,7 +1565,7 @@
       {
         "id": "media_consent",
         "title": "Audio/Photo/Video Use Consent",
-        "description": "<p><strong>CONSENT FOR AUDIO/PHOTO/VIDEO USE</strong></p><p>Reliance Medical Center Inc. requests voluntary consent to use your image and medical information and to take/use audio, video, and photographic material in internal and external communications, including website, social media, and patient education/promotional materials in digital or print formats.</p><p>Please select <strong>Do</strong> or <strong>Do Not</strong>. The selected line is marked with \"I\" to match the original paper form format.</p><p>If you select <strong>Do</strong>, you grant permission to capture and publish materials for lawful purposes, and you authorize Practice to edit/alter/share/remix/build upon those materials. You waive privacy rights associated with such uses and understand no payment/remuneration is due for permitted use.</p><p>You are not required to grant this permission for treatment/payment/benefit eligibility. You may request a copy of your signed authorization. You acknowledge that once disclosed/published, information may be subject to re-disclosure by recipients and may no longer be protected by HIPAA/privacy regulations to the same extent.</p><p>You may revoke/withdraw this permission at any time to prohibit future use by sending or hand-delivering written notice to Practice with confirmation of receipt. If not revoked/withdrawn, this authorization remains active in perpetuity.</p>",
+        "description": "<div style=\"font-size: 1.125rem; line-height: 1.9;\"><p><strong>Reliance Medical Center Inc. Consent for Audio/Photo/Video Use Form</strong></p><p>Reliance Medical Center Inc. (the 'Practice') seeks your voluntary consent to use your image and medical information and to take and use audio, video, and photographic material of you in our internal and external communications, including the Practice's website, social media, and patient education information online and in print. To ensure that our practice is acting with your authorization, we ask that you complete and sign this form.</p><p>Please initial below next to your choice: I, the undersigned Patient or Responsible Party: ______DO or ______DO NOT grant Practice permission to use my image and medical information as provided under this consent.</p><p>If you initialed next to 'Do', you hereby grant the Practice permission to take photographs and/or audio or video recordings of you, and to publish those materials for any lawful purpose, including, but not limited to, use on the Practice's website, in social media accounts, and promotional materials, either digital or in print, in perpetuity. You also authorize Practice to edit, alter, share, remix, tweak, build upon or in any way alter the photograph(s)mentioned above. You also waive any rights of privacy associated with the uses outlined above. You understand that you will not be entitled to any payment or other form of remuneration as a result of the use of your information and audio/video/photographic material.</p><p>You understand that you are not required to grant the Practice the above permission. The Practice does not condition treatment, payment, or benefit eligibility on the signing of this form. You can request a copy of your signed authorization.</p><p>You are aware that your protected health information will exist forever in either a recorded, printed, and/or electronic version or other version as may develop over time and that once it is published or disclosed in any form it will continue to be used. You understand that your information that is used or disclosed pursuant to this authorization may be subject to re-disclosure by the recipient and will no longer be protected by the federal regulations protecting privacy of an individual's health information under the Health Insurance Portability and Accountability Act of 1996 ('HIPAA') and other applicable federal and state law.</p><p>You understand that you may revoke or withdraw this permission at any time to prohibit future use of your information. To do so, you must send or hand-deliver written notice to the Practice with confirmation of receipt. If not revoked/withdrawn by you, this authorization is active in perpetuity.</p><p>I have read this Audio/Photo/Video Use Consent in its entirety and agree to be bound by all of its terms and conditions as described above. I acknowledge and agree that I have been given the opportunity to ask any questions and have either (i) declined the opportunity to do so, or (ii) had all my questions answered to my satisfaction.</p></div>",
         "fields": [
           {
             "key": "media_consent.signer_role",
@@ -1692,7 +1692,7 @@
       {
         "id": "telemedicine_consent",
         "title": "Telemedicine Consent",
-        "description": "<p><strong>CONSENT TO TELEMEDICINE SERVICES</strong></p><p>You acknowledge Practice may conduct evaluations via telemedicine as defined under Georgia law. You understand you must remain in Georgia during telemedicine visits and that potential risks include interruptions, unauthorized access, and technical difficulties. You may ask questions and request clarification at any time.</p><p>You understand the requirement for at least one in-person visit each year with a Georgia-licensed physician, physician assistant, or nurse practitioner, either through Practice or your Georgia primary care physician.</p><p>By consenting, you voluntarily request telemedicine participation and agree to provide complete and accurate medical history/condition information. You are responsible for your own technology and a quiet/private environment. If sessions are interrupted, alternative communication methods may be used (including audio-only if needed). Practice may require in-person care or referral if telemedicine is not adequate in professional judgment.</p><p>You authorize disclosure of personal/health information necessary for telemedicine care. While safeguards are used, electronic transmission carries confidentiality/security limitations. The telemedicine standard of care is intended to match in-person care. You may withdraw telemedicine consent at any time by notifying Practice; if in-person care is unavailable, referral to another practice/provider may be required.</p>",
+        "description": "<div style=\"font-size: 1.125rem; line-height: 1.9;\"><p><strong>Reliance Medical Center Inc. Consent to Telemedicine Services</strong></p><p>PLEASE READ EACH SECTION CAREFULLY. YOU MAY REQUEST A COPY OF THIS FORM FOR YOUR OWN RECORDS.</p><p>I, the undersigned Patient or Responsible Party 1, understand and acknowledge that Reliance Medical Center Inc. and its health care providers (the 'Practice') may conduct evaluations via telemedicine. Under Georgia law, telemedicine is 'the delivery of clinical health care services by means of real-time two-way audio, visual, or other telecommunications or electronic communications, including the application of secure video conferencing or store and forward transfer technology to provide or support health care delivery.' O.C.G.A. \u00a7 33-24-56.4. I understand I must remain in Georgia throughout the telemedicine visit. There are potential risks to telemedicine technology, including interruptions, unauthorized access and technical difficulties. I understand I can ask questions and seek clarification of the procedures and telemedicine technology at any time. I understand that I must have at least one in-person visit with a Georgia licensed physician, physician assistant, or nurse practitioner each year. I may schedule such in-person visit with such a provider at the Practice. If not, I understand I must see my Georgia primary care physician in-person at least once each year.</p><p><strong>Consent for Treatment:</strong> I voluntarily request the Practice, as it deems necessary, to participate in my health care through the use of telemedicine. I acknowledge that it is my responsibility to provide information about my medical history, condition and care that is complete and accurate to the best of my ability. I further acknowledge my failure to accurately and completely relay information about my medical history, condition and care may adversely impact Practice's advice, recommendations or decisions about my care. I understand that I am responsible for providing my own technology (e.g., computer, laptop, tablet) and for creating a quiet, uninterrupted environment for telemedicine sessions. I also understand that in the event the telemedicine session is interrupted due to a technological problem or equipment failure, alternative means of communication may be implemented, which may include audio-only telephone if no other visual communication mean is then-available. I understand that if the determines in its reasonable professional judgment that telemedicine services will not adequately address my medical needs, I may be required to schedule an in-person session or I may be referred elsewhere.</p><p><strong>Release of Information:</strong> To facilitate the provision of care and/or treatment through telemedicine, I voluntarily request and authorize the disclosure of my Personal Information (defined below) to Practice. I understand this disclosure may include my name, address, contact and demographic information, general health status and treatment information, images, individually identifiable health information or protected health information, and other information related to my health or condition (collectively 'Personal Information'). I understand that the disclosure of my Personal Information to Practice through telemedicine will be by electronic transmission. Although precautions are taken to protect the confidentiality of this information by preventing unauthorized review, I understand that electronic transmission of data, video images and audio is new and developing technology and that confidentiality may be compromised by failures of security safeguards or illegal and improper tampering.</p><p><strong>Right to Withdraw Consent:</strong> I understand that the standard of care provided via telemedicine will be the same as that provided in person. If my provider at the Practice determines that the telemedicine service delivery model is ineffective and should be discontinued, I will be notified immediately. If I determine the telemedicine service delivery model is ineffective or inappropriate, I will notify the Practice immediately and can withdraw my consent to participate. I understand that I have the right to withdraw my consent to the use of telemedicine in the course of my care at any time. If I withdraw my consent and am unable to go in person to the Practice, I may be referred to another practice or provider.</p><p>I have read this Telemedicine Consent in its entirety and agree to be bound by all of its terms and conditions as described above. I acknowledge and agree that I have been given the opportunity to ask any questions and have either (i) declined the opportunity to do so, or (ii) had all my questions answered to my satisfaction.</p></div>",
         "fields": [
           {
             "key": "telemedicine_consent.signer_role",
@@ -1771,7 +1771,7 @@
       {
         "id": "financial_responsibility",
         "title": "Financial Responsibility Agreement",
-        "description": "<p><strong>PATIENT FINANCIAL RESPONSIBILITY AGREEMENT &amp; CANCELLATION POLICY</strong></p><p>You (Patient or Responsible Party) agree to personal financial responsibility for all services rendered by Practice, including amounts not paid by insurance.</p><p><strong>Insurance and payment terms:</strong> if uninsured by an accepted plan, or if updated insurance is not provided/verified, full payment is due at each visit. Co-payments and deductibles are due at time of service. Non-covered/denied charges are your responsibility. If insurer does not pay within 45 days, remaining balance is billed to you and due within 15 days before account is considered past due.</p><p><strong>Claims and records:</strong> you authorize release of medical/other information needed for claim processing and direct payment of benefits to Practice. You remain responsible for balances regardless of insurer payment outcome and must provide requested information to insurer.</p><p><strong>Other charges and nonpayment:</strong> DME, outside labs, consultants, and external services are your responsibility. If account is over 60 days past due, non-emergency scheduling may be restricted and patient termination procedures may apply. Unpaid balances may be sent to collections. Any payment plans/deferrals must be in writing with the office manager; verbal agreements are not accepted.</p><p><strong>No-show policy:</strong> a $50.00 charge applies to missed appointments and cancellations with less than 24 hours notice. Three no-shows within 1 year may result in dismissal for non-compliance. Arrival more than 15 minutes late may be treated as a no-show.</p>",
+        "description": "<div style=\"font-size: 1.125rem; line-height: 1.9;\"><p><strong>Reliance Medical Center Inc. Patient Financial Responsibility Agreement &amp; Cancellation Policy</strong></p><p>I, the undersigned Patient or Responsible Party 2, understand and agree that I am personally responsible for full payment of all services rendered to me by Reliance Medical Center Inc. ('Practice'). Without limiting the generality of the foregoing, I agree as follows:</p><p><strong>Insurance:</strong> I understand that the Practice participates in many insurance plans. If I am not insured by a plan the Practice accepts, I must tender full payment at each visit. If I am insured but do not have an updated insurance card, I must tender full payment at each visit until the Practice verifies my coverage. If I have any questions regarding my coverage, it is my responsibility to contact my insurer.</p><p><strong>Co-payments and Deductibles:</strong> If insured, I understand that all co-payments and deductibles must be paid at the time of each service, which arrangement is part of my contract with my insurer.</p><p><strong>Non-Covered Services:</strong> I accept financial responsibility for any non-covered or denied charges and understand I must pay for these services in full at the time of each visit. If my insurer does not pay my claim within forty-five (45) days, the Practice will bill the balance to me, and I have fifteen (15) days to pay before my account will be considered past due.</p><p><strong>Claim Submission and Payment:</strong> I authorize the Practice to release any medical or other information necessary to process all insurance claims. I authorize payment of my insurance benefits directly to the Practice. I understand that my insurer may need me to supply certain information directly, and it is my responsibility to comply with their request. I understand that the balance of my claim is my responsibility whether or not my insurer pays the claim.</p><p><strong>Coverage Changes:</strong> If my insurance changes, I am responsible for notifying the Practice before my next visit so that the Practice can make any appropriate changes.</p><p><strong>Other Costs:</strong> Charges for durable medical equipment, visits with consultants or other practices, and lab or other tests performed by an external entity are my responsibility. I authorize the Practice to release any medical or other information necessary to order or arrange for such equipment, visits, or tests.</p><p><strong>Nonpayment:</strong> If my account is over sixty (60) days past due, I may not schedule additional visits except on an emergency basis and the Practice may notify me that I am terminated as a patient. Upon such notification, I have thirty (30) days to find alternative medical care. I understand that if a balance remains unpaid, the Practice may refer my account to a collection agency. I understand that even if I suspend or terminate treatment, any fees for professional services rendered to me or to my dependent up to the point of termination will be immediately due and payable. Any other arrangements that may involve a payment plan or payment deferral must be made in writing with the office manager of the Practice; verbal agreements are not acceptable.</p><p><strong>HSA/FSA:</strong> I am responsible for determining if any co-payments, deductibles, coinsurance, or other fees paid to the Practice are eligible for a Health Savings Account, Flexible Spending Account, Health Reimbursement Arrangement, or similar accounts or plans.</p><p><strong>'No Show' Charges:</strong> I acknowledge that the Practice will charge me $50.00 for any 'no show' appointment, which includes appointments I miss with no notice and appointments I cancel with less than 24 hours' notice. This charge will be billed directly to me and is not covered or reimbursable by my insurer. If I 'no show' to 3 appointments within 1 year, the Practice has the right to dismiss me from the Practice for non-compliance. I further acknowledge that if I am more than 15 minutes late to a scheduled appointment, the Practice will consider it a 'no show' and will charge me according to this paragraph.</p><p>I have read this Patient Financial Responsibility Agreement in its entirety and agree to be bound by all of its terms and conditions as described above. I acknowledge and agree that I have been given the opportunity to ask any questions and have either (i) declined the opportunity to do so, or (ii) had all my questions answered to my satisfaction.</p></div>",
         "fields": [
           {
             "key": "financial_responsibility.signer_role",
