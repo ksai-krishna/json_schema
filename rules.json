@@ -545,6 +545,36 @@
       "target_field": "financial_responsibility_signed_date",
       "transform": "date",
       "required": true
+    },
+    {
+      "source_path": "communication_preferences.agree_general_patient_consents",
+      "target_field": "ack_general_patient_consents",
+      "transform": "equals:true",
+      "required": true
+    },
+    {
+      "source_path": "privacy_acknowledgement.agree_privacy_practices",
+      "target_field": "ack_privacy_practices",
+      "transform": "equals:true",
+      "required": true
+    },
+    {
+      "source_path": "media_consent.agree_media_consent",
+      "target_field": "ack_media_consent",
+      "transform": "equals:true",
+      "required": true
+    },
+    {
+      "source_path": "telemedicine_consent.agree_telemedicine_consent",
+      "target_field": "ack_telemedicine_consent",
+      "transform": "equals:true",
+      "required": true
+    },
+    {
+      "source_path": "financial_responsibility.agree_financial_responsibility",
+      "target_field": "ack_financial_responsibility",
+      "transform": "equals:true",
+      "required": true
     }
   ]
 }
